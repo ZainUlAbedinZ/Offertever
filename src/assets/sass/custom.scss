@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+// @for($i from 10 through 100){
+//     .fs--#($i){
+//         font-size: $i/16+px;
+//     }
+// }
+
+$body-bg: #f2f2f2;
+$body-color: #050516;
+
+$theme-colors: (
+	'site-primary': #03223f,
+    'site-orange':#fe5129,
+    'site-text': #03223f, 
+    'site-heading': #03223f,
+	'site-secondary': #f1f0ec,
+    'site-light-heading': #f1f0ec,
+    'site-main-color':#d6d5d2,
+    'site-Mainbar-color':#48cae4,
+);
+
+
+// 48cae4
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+.hero_section{
+    background-image: url('../img/bg_img.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    // background-size: auto;
+//    background-size: contain; 
+    // background-position: left;
+    // position: ;
+    // background-position: 30% 40%;
+    // padding-top: 2%;
+    padding-left: 12%;
+    // padding-bottom: 12%;
+    background-position: left bottom;
+    overflow: auto;
+
+    &_col_1 {
+        height: auto;
+        &_text{
+            // margin-top: 270px;
+            // width: ;
+            h5{
+                
+                letter-spacing: -1px;
+                color: #03223f;
+                font-weight: 700;
+                font-family: "Open Sans";
+            }
+            p{
+                
+                letter-spacing: -1px;
+                color: #03223f;
+                font-weight: 700;
+                font-family: "Open Sans";
+         }
+
+            margin-top: 410px;
+            img{
+                // margin-top: -57px;
+                // margin-right: -75px;
+                margin-top: -50px;
+                position: relative;
+                z-index: 1;
+                // top: 1px;
+                // right: 23px;
+            }
+            // mt--18
+            // mt-250px
+        }
+
+    }
+    &_col_2 {
+        height: auto;
+        &_text1{
+            letter-spacing: 1px;
+            color: #03223f;
+            font-weight: 700;
+            font-family: "Open Sans";
+        }
+        &_text2{
+        letter-spacing: 1px;
+        color: #03223f;
+        font-weight: 700;
+        font-family: "Open Sans";
+    //    hero_section_col_2_text
+        &_text3{
+        // letter-spacing: 1px;
+        color: #03223f;
+        font-weight: 700;
+        font-family: "Open Sans";
+        }
+        // 
+        // font-size: 26px;
+           
+        }
+        &_Card{
+            &_Card_header{
+                &_Col{
+                p {
+                    color: #eeeeee;
+                    font-weight: 700;
+                    font-family: "Open Sans"; 
+                }
+            }
+
+            }
+        }
+    }
+    
+    cursor: pointer;
+
+}
+.hero_section_topBar{
+    &_column {
+        strong {
+//             width: 298px;
+// height: 84px;
+     font-size: 14px;
+     text-transform: uppercase;
+     color: #03223f;
+     font-weight: 700;
+     font-family: "Open Sans";
+        }
+    }
+}
+// Main Section
+.hero_section_main_content{
+    h3{
+    font-size: 27px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #03223f;
+    font-weight: 700;
+    font-family: "Open Sans";
+    }
+    h5 {
+   color: #03223f;
+   font-weight: 600;
+   font-family: "Open Sans";
+    }
+    p {
+    color: #03223f;
+    font-weight: 600;
+    font-family: "Open Sans";
+    }
+}
