@@ -45,12 +45,14 @@ $theme-colors: (
     overflow: auto;
 
     &_col_1 {
+        padding: 0 !important;
         height: auto;
         &_text{
             // margin-top: 270px;
             // width: ;
-            h5{
-                
+            h3{
+                margin: 0 !important;
+               padding: 0 !important;
                 letter-spacing: -1px;
                 color: #03223f;
                 font-weight: 700;
@@ -69,10 +71,10 @@ $theme-colors: (
                 // margin-top: -57px;
                 // margin-right: -75px;
                 margin-top: -50px;
-                position: relative;
+                position: absolute;
+                right: 0;
                 z-index: 1;
-                // top: 1px;
-                // right: 23px;
+                
             }
             // mt--18
             // mt-250px
@@ -81,6 +83,7 @@ $theme-colors: (
     }
     &_col_2 {
         height: auto;
+       
         &_text1{
             letter-spacing: 1px;
             color: #03223f;
