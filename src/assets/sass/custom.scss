@@ -33,102 +33,111 @@ $theme-colors: (
     background-image: url('../img/bg_img.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    // background-size: auto;
-//    background-size: contain; 
-    // background-position: left;
-    // position: ;
-    // background-position: 30% 40%;
-    // padding-top: 2%;
     padding-left: 12%;
-    // padding-bottom: 12%;
     background-position: left bottom;
-    overflow: auto;
 
     &_col_1 {
         padding: 0 !important;
         height: auto;
         &_text{
-            // margin-top: 270px;
-            // width: ;
-            h3{
-                margin: 0 !important;
-               padding: 0 !important;
+            margin-top: 410px;
+            @media(max-width:767.98px){
+                margin-top: 60px !important;
+            }
+            
+           
+            h4{
                 letter-spacing: -1px;
                 color: #03223f;
                 font-weight: 700;
                 font-family: "Open Sans";
+                font-size: 30px;
             }
             p{
                 
-                letter-spacing: -1px;
+                // letter-spacing: -1px;
                 color: #03223f;
                 font-weight: 700;
                 font-family: "Open Sans";
+                font-size: 12px;
          }
-
-            margin-top: 410px;
             img{
                 // margin-top: -57px;
                 // margin-right: -75px;
-                margin-top: -50px;
+                // margin-top: -50px;
+                margin-top: -70px;
                 position: absolute;
                 right: 0;
                 z-index: 1;
-                
             }
-            // mt--18
-            // mt-250px
+          
         }
 
     }
     &_col_2 {
-        height: auto;
-       
+        height: 100% 100%;
         &_text1{
-            letter-spacing: 1px;
+            font-size: 21px;
+            letter-spacing: 0.8px;
             color: #03223f;
             font-weight: 700;
             font-family: "Open Sans";
         }
         &_text2{
+            // font-size: 21px;
         letter-spacing: 1px;
         color: #03223f;
         font-weight: 700;
         font-family: "Open Sans";
-    //    hero_section_col_2_text
+ 
         &_text3{
         // letter-spacing: 1px;
         color: #03223f;
         font-weight: 700;
         font-family: "Open Sans";
         }
-        // 
-        // font-size: 26px;
            
         }
         &_Card{
-            &_Card_header{
+            @media (max-width:1172px){
+                width: 30rem !important;
+                
+            }
+            @media(max-width:767.98px){
+                width: 30rem !important;
+            }
+            // 586
+            @media(max-width:586px){
+                width: 20rem !important;
+            }
+            // 
+            &_Card_header{ 
                 &_Col{
                 p {
+                    font-size: 16px !important;
+                    letter-spacing: 0.5px;
                     color: #eeeeee;
                     font-weight: 700;
                     font-family: "Open Sans"; 
                 }
             }
-
+            }
+            &_body{
+                &_text{
+                    small{
+                        letter-spacing: 0.5px;
+                        font-size: 10px;
+                    }
+                }
             }
         }
     }
-    
     cursor: pointer;
-
 }
 .hero_section_topBar{
     &_column {
         strong {
-//             width: 298px;
-// height: 84px;
-     font-size: 14px;
+    //  font-size: 14px;
      text-transform: uppercase;
      color: #03223f;
      font-weight: 700;

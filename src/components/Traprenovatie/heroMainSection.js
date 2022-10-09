@@ -63,8 +63,8 @@ const HeroSection = props => {
             </Col>
         </Row>
         <br />
-        <div className='text-center'>
-        <Button className='bg-site-orange text-light'>
+        <div className='text-center mx-auto'>
+        <Button className='mx-auto bg-site-orange text-light'>
            GRATIS OFFERTES VERGELIJKN -{'>'}
         </Button>
         </div>

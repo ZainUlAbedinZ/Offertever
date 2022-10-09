@@ -19,7 +19,7 @@ const Traprenovatie = props => {
 				<HeroSectionTopContainer />
 		      </Container>
 		{/* Flex  */}
-		      <Container className='bg-site-Mainbar-color ' fluid>
+		      <Container className='bg-site-Mainbar-color' fluid>
 		           <MainNavbar  />
 		      </Container>
 		  {/* Section Main */}
