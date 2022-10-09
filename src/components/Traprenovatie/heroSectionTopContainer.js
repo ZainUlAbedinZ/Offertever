@@ -24,9 +24,9 @@ const heroSectionTopContainer = props => {
 							 <Row className='mt-1'>
 						<Col md='12' lg='12' sm='12' className='p-0'>
 							<div>
-						<img src={heroTextLogo} className='float-right' rounded width='130px' />
+						<img src={heroTextLogo} className='pl-3 pl-md-0 float-right' rounded width='130px' />
 						</div>
-						<h4 className='text-light text-left fw-800'>
+						<h4 className='pl-4 pl-md-0 text-light text-left fw-800'>
 							Gratis en Vrijblijvend <br />
 						 <span className='w-100'>offertes aanvragen bij een <br/> </span> 
 							netwerk van Speicallisten ?
@@ -35,8 +35,8 @@ const heroSectionTopContainer = props => {
 							{/* <p className='text-light text-justify mt-1 mb-0 font-weight-normal w-100'> */}
 							<p className='text-light'></p>
                                {/* </p > */}
-                            <p className='pr-3 text-justify text-light font-weight-normal shadow-sm'>
-                            <span className='w-100'> Zo krijg je de beste prijs voor jouw traprenovatie! 
+                            <p className='pl-3 pl-md-0 pl-md-0 pr-5 pr-md-3 text-justify text-light font-weight-normal shadow-sm'>
+                            <span className='w-100 font-weight-bold'> Zo krijg je de beste prijs voor jouw traprenovatie! 
                             </span>
                                 .Is jouw trap ook toe aan een opknapbeaurt? Dan is dit jouw kans.Het
 							Kost je niets en je zit nergens aan vast. Zo kies jij zelf de bestie aanbieder.
@@ -61,29 +61,31 @@ const heroSectionTopContainer = props => {
 						</Col>
 						</Row>
 						<Card
-                       className="px-3 mt-3 mb-3 bg-site-primary  hero_section_col_2_Card"
-                     style={{width: '30rem'}}>
+                       className="px-3 mt-3 mb-3 bg-site-primary w-100 w-md-75 w-lg-75  hero_section_col_2_Card"
+                    >
+						{/*  style={{width: '30rem'}} */}
                    <CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85 hero_section_col_2_Card_header'> 
                  	<Col md='8' lg='8' sm='8' className='p-0' >
                    <p className='w-100'>Naar wie mongen we <br /> 
                            de Gratis offertes sturen? </p>
                       </Col>
     <Col md='4' lg='4' sm='4'>
-    <img width="75rem" className='float-right' src={ThumbsUp} alt="Card image cap" />
+    <img  className='float-right' src={ThumbsUp} alt="Card image cap" />
+   {/* width="75rem" */}
     </Col>
     </CardHeader>
     <CardBody color='text-light hero_section_col_2_Card_body'>
      <CardText className='hero_section_col_2_Card_body_text' >
 	 <Row className='justify-content-center'>
-	  <Col className='p-0 w-25' lg='3' md='3' sm='3'>
+	  <Col className='p-0 w-100 w-md-25' lg='3' md='3' sm='4'>
       <Label className='text-light'>Postcode</Label>
 	  <Input type='text' className='w-100'  />
 	  </Col>
-	  <Col className='px-2' lg='6' md='6' sm='6'>
+	  <Col className='px-0 px-md-2' lg='6' md='6' sm='4'>
       <Label className='text-light'>Straat</Label>
 	  <Input type='text' className='w-100' />
 	  </Col>
-	  <Col className='p-0 w-25' lg='3' md='3' sm='3'>
+	  <Col className='p-0 w-100 w-md-25' lg='3' md='3' sm='4'>
       <Label className='text-light'>Huisnument</Label>
 	  <Input type='text' className='w-100' />
 	  </Col>
