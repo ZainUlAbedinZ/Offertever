@@ -37,32 +37,32 @@ $theme-colors: (
     background-position: left bottom;
 
     &_col_1 {
-        padding: 0 !important;
+        // padding: 0 !important;
         &_text{
-            margin-top: 410px;
-            @media(max-width:767.98px){
-                margin-top: 60px !important;
-            }
+            // margin-top: 410px;
+            // @media(max-width:767.98px){
+            //     margin-top: 60px !important;
+            // }
             
            
             h4{
-                letter-spacing: -1px;
-                color: #03223f;
-                font-weight: 700;
-                font-family: "Open Sans";
-                font-size: 30px;
+                // letter-spacing: -1px;
+                // color: #03223f;
+                // font-weight: 700;
+                // font-family: "Open Sans";
+                // font-size: 30px;
 
-                @media(max-width:767.98px){
-                 font-size: 20px !important;
-                }
+                // @media(max-width:767.98px){
+                //  font-size: 20px !important;
+                // }
             }
             p{
                 
                 // letter-spacing: -1px;
-                color: #03223f;
-                font-weight: 700;
-                font-family: "Open Sans";
-                font-size: 12px;
+                // color: #03223f;
+                // font-weight: 700;
+                // font-family: "Open Sans";
+                // font-size: 12px;
          }
             img{
                 // margin-top: -57px;
