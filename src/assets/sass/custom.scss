@@ -45,7 +45,7 @@ $theme-colors: (
             // }
             
            
-            h4{
+            // h4{
                 // letter-spacing: -1px;
                 // color: #03223f;
                 // font-weight: 700;
@@ -55,112 +55,112 @@ $theme-colors: (
                 // @media(max-width:767.98px){
                 //  font-size: 20px !important;
                 // }
-            }
-            p{
+            // }
+            // p{
                 
                 // letter-spacing: -1px;
                 // color: #03223f;
                 // font-weight: 700;
                 // font-family: "Open Sans";
                 // font-size: 12px;
-         }
-            img{
+        //  }
+            // img{
                 // margin-top: -57px;
                 // margin-right: -75px;
                 // margin-top: -50px;
-                margin-top: -70px;
-                position: absolute;
-                right: 0;
-                z-index: 1;
-                @include media-breakpoint-only(xs) {
+                // margin-top: -70px;
+                // position: absolute;
+                // right: 0;
+                // z-index: 1;
+                // @include media-breakpoint-only(xs) {
                   position: absolute;
                   width: 100px;
                   left: 0;
                   margin-top: -103px;
-                }
-                }
+                // }
+                // }
             }
           
         }
 
     
-    &_col_2 {
-        height: 100% 100%;
-        &_text1{
-            font-size: 21px;
-            letter-spacing: 0.8px;
-            color: #03223f;
-            font-weight: 700;
-            font-family: "Open Sans";
-        }
-        &_text2{
-        letter-spacing: 1px;
-        color: #03223f;
-        font-weight: 700;
-        font-family: "Open Sans";
+    // &_col_2 {
+    //     height: 100% 100%;
+    //     &_text1{
+    //         font-size: 21px;
+    //         letter-spacing: 0.8px;
+    //         color: #03223f;
+    //         font-weight: 700;
+    //         font-family: "Open Sans";
+    //     }
+    //     &_text2{
+    //     letter-spacing: 1px;
+    //     color: #03223f;
+    //     font-weight: 700;
+    //     font-family: "Open Sans";
  
-        &_text3{
-        color: #03223f;
-        font-weight: 700;
-        font-family: "Open Sans";
-        }
+    //     &_text3{
+    //     color: #03223f;
+    //     font-weight: 700;
+    //     font-family: "Open Sans";
+    //     }
            
-        }
-        &_Card{
-            // @media (max-width:1172px){
-            //     width: 30rem !important;
+    //     }
+    //     &_Card{
+    //         // @media (max-width:1172px){
+    //         //     width: 30rem !important;
                 
-            // }
-            // @media(max-width:767.98px){
-            //     width: 30rem !important;
-            // }
-            // // 586
-            // @media(max-width:586px){
-            //     width: 20rem !important;
-            // }
-            //
-            // @include media-breakpoint-only(xs) {width: 15rem !important }
-            // @include media-breakpoint-only(sm) {width: 30rem !important }
+    //         // }
+    //         // @media(max-width:767.98px){
+    //         //     width: 30rem !important;
+    //         // }
+    //         // // 586
+    //         // @media(max-width:586px){
+    //         //     width: 20rem !important;
+    //         // }
+    //         //
+    //         // @include media-breakpoint-only(xs) {width: 15rem !important }
+    //         // @include media-breakpoint-only(sm) {width: 30rem !important }
 
 
 
-            &_Card_header{ 
-                &_Col{
-                p {
-                    font-size: 16px !important;
-                    letter-spacing: 0.5px;
-                    color: #eeeeee;
-                    font-weight: 700;
-                    font-family: "Open Sans"; 
-                }
-            }
-            }
-            &_body{
-                &_text{
-                    small{
-                        letter-spacing: 0.5px;
-                        font-size: 10px;
-                    }
-                }
-            }
-        }
-    }
+    //         &_Card_header{ 
+    //             &_Col{
+    //             p {
+    //                 font-size: 16px !important;
+    //                 letter-spacing: 0.5px;
+    //                 color: #eeeeee;
+    //                 font-weight: 700;
+    //                 font-family: "Open Sans"; 
+    //             }
+    //         }
+    //         }
+    //         &_body{
+    //             &_text{
+    //                 small{
+    //                     letter-spacing: 0.5px;
+    //                     font-size: 10px;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
      
 }
 .hero_section_topBar{
-   margin-left: 16%;
-   @include media-breakpoint-only(xs) {
-   margin-left: 0;
-  }
-    &_column {
-        strong {
-    //  font-size: 14px;
-    //  text-transform: uppercase;
-     color: #03223f;
-     font-weight: 700;
-     font-family: "Open Sans";
-        }
-    }
+//    margin-left: 16%;
+//    @include media-breakpoint-only(xs) {
+//    margin-left: 0;
+//   }
+//     &_column {
+//         strong {
+//     //  font-size: 14px;
+//     //  text-transform: uppercase;
+//      color: #03223f;
+//      font-weight: 700;
+//      font-family: "Open Sans";
+//         }
+//     }
 }
 
 // Main Section
@@ -215,7 +215,7 @@ $theme-colors: (
        }
 }
 
-.hero_section_main_Testimonials{
+// .hero_section_main_Testimonials{
     // margin-left: 280px;
     // @include media-breakpoint-only(sm) {
     //     margin-left: 0;
@@ -224,4 +224,4 @@ $theme-colors: (
     //     margin-left: 0;
     //    }
 
-}
+// }

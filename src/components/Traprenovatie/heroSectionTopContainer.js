@@ -24,7 +24,7 @@ const heroSectionTopContainer = props => {
 							 {/* <Row className='mt-1'> */}
 						{/* <Col md='12' lg='12' sm='12' className='p-0'> */}
 							<div>
-						<img src={heroTextLogo} className='pl-3 pl-md-0 float-right' rounded width='130px' />
+						<img src={heroTextLogo} className='pl-3 pl-md-0  float-right' rounded width='130px' />
 						</div>
 						<div className='p-0 fs-5'>
 						<h4 className='pl-0 fs-3 pl-md-0 text-light text-left fw-600'>
