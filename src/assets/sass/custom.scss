@@ -38,7 +38,6 @@ $theme-colors: (
 
     &_col_1 {
         padding: 0 !important;
-        height: auto;
         &_text{
             margin-top: 410px;
             @media(max-width:767.98px){
@@ -146,7 +145,7 @@ $theme-colors: (
             }
         }
     }
-          cursor: pointer;
+        //   cursor: pointer;
 }
 .hero_section_topBar{
    margin-left: 16%;
