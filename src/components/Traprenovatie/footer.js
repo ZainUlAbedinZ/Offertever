@@ -9,7 +9,9 @@ const Footer = props => {
    
         <div className='bg-site-primary'>
         <Container>
-          <div className='mx-md-5 px-md-5'>
+          <Row className='justify-content-end'>
+            <Col md='9' sm='12'>
+          {/* <div className='mx-md-5 px-md-5'> */}
           <div className='text-center'> 
           <img src={HeroTextTopLogo} className='mt-2 text-center ' />
           <p className='text-muted font-weight-normal mt-2'>Offertevergelijker is de vergelijkingswebsite voor bouw- en verbouwklussen van Nederland.</p>
@@ -36,7 +38,9 @@ const Footer = props => {
             </div>
           </Container>
           </div>
-          </div>
+          </Col>
+          </Row>
+          {/* </div> */}
           </Container>
         </div>
 		</>

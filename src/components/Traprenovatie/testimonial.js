@@ -9,10 +9,11 @@ const Testimonial = props => {
 		
 		 {/* Testimonial */}
          <Container className='bg-white'>
-            <div className='px-0 mx-md-5 px-md-5'>
+            <Row className='justify-content-end'>
+            <Col md='9' sm='12'>
             <h5 className='text-center py-3'>Meer dan <strong className='text-primary'>109.00</strong> tevredence klanten</h5>
-             <Row className='ml-0 ml-md-3'>
-                <Col lg='6' md='6' >
+             <Row>
+                <Col lg='6' md='6' sm='12' >
                 <div className='text-center h-3'>
                 <img src={RatingStar1}  className='fs-1 text-center'/>
                 </div>
@@ -21,7 +22,7 @@ const Testimonial = props => {
                 oplossing zou komen. Zeer tevrenden over de dienst van Offertevergelijker.nl
                 </p>
                 </Col>
-                <Col lg='6' md='6'>
+                <Col lg='6' md='6' sm='12'>
                   <div className='text-center h-3'>
                 <img src={RatingStar2}  className='fs-1 text-center'/>
                 </div>
@@ -31,7 +32,8 @@ const Testimonial = props => {
                </p>
                 </Col>
              </Row>
-             </div>
+             </Col>
+             </Row>
          </Container>
 		  
 		</>

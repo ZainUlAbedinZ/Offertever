@@ -11,7 +11,7 @@ const MainNavbar = props => {
 		<>
   <Container>
 
-  <Row className='justify-content-end w-100'>
+  <Row className='justify-content-end w-100 flex-wrap'>
         <Col md='10' sm='12' className='d-md-flex d-col'>
     <Col lg='3' md='6' sm='12' className='py-2  py-md-4  d-flex '>
         <img src={Checkbox} color='light' className='text-light h-50 w-25' /> 

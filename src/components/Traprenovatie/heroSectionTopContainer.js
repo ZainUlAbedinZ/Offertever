@@ -45,13 +45,8 @@ const heroSectionTopContainer = props => {
 							Moeiteloos en zonder verplichtingen. Laat snel je gegevens achter en pak deze kans
 							</p>
 							</div>
-							{/* </Row> */}
-							{/* </Col> */}
-						{/* </Row> */}
 					</Col>
 					<Col  md='5' xs='12' className='hero_section_col_2 align-items-end order-sm-1 order-1 order-md-2 order-xs-1 pl-0 ml-0'>
-						{/* <Row className='ml-2'> */}
-						{/* <Col lg='9' md='9' sm='9'> */}
 						<img src={HeroTextTopLogo} className='mt-3 text-center' width='140px' />
 						<br />
 						{/* Text Top Header */}
@@ -61,8 +56,7 @@ const heroSectionTopContainer = props => {
 						<br />
 						<span className='font-weight-bold fs-2 text-site-text'>Vraag nu voor gratis offertes  aan voor jouw</span><span className='text-site-orange fs-2'> TRAPRENOVATIE </span> 
 						</p>
-						{/* </Col> */}
-						{/* </Row> */}
+
 						<Card
                        className="px-3 mt-3 mb-3 bg-site-primary w-100 w-sm-100 w-md-75 w-lg-75 w-xl-75  hero_section_col_2_Card"
                     >

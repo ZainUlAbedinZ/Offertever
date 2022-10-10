@@ -9,45 +9,48 @@ const HeroSection = props => {
 		<>
         {/* Flex Container */}
           <Container className='hero_section_main_content'>
-            <div className='mx-4'>
+            <Row className='justify-content-end'>
+                <Col md='9' sm='12'>
 		<h4 className='text-dark text-center pt-4'>TRAPRENOVATIE OFFERTES VERGELIJKN</h4>
         <hr height='50px' width='90px' color='#FF4500'/>
         <h5 className='text-site-text text-center text-bold  fs-2'>Populairste materialen traprenovatie</h5>
-        <p className='text-site-text text-center px-5'>
+        <p className='text-site-text text-center'>
         Voorhen werd er vaak gekozen om de trap te bekleden met tapijt of hem te schildrence. Deze opties tonens
         echtar snel gebruiksspen, waardon de trap slordig oogt. Tegenwoordig kiest men het meest voor trapbekleding van
         laminaat, HPL/CPL, PVC of hout. Dit ziet er niet allen ontzettened strack uit wanneer het wordt geplaatst; het 
         blijft deze nieuwe look ook nog vele jaren houden!
         </p>
-        </div>
+    
+        </Col>
+        </Row>
         </Container>
         <br />
-        {/* margin-left: 117px !important; */}
-       <Container className='ml-0 ml-md-5 d-block px-5 hero_section_main_content_Container2' >  
-       <div className='ml-0 ml-md-5'>
-        <Row className='text-end ms-auto p-0 float-right'>
-            <Col lg='6' md='6' className='d-flex justify-content-between'>
+       <Container className='ml-0 ml-md-5 d-block px-0 px-md-5 hero_section_main_content_Container2' >  
+       <Row className='justify-content-end'>
+        <Col md='9' sm='12'>
+        <Row  className='p-0'>
+            <Col lg='6' md='6' sm='12' className='d-flex justify-content-between'>
                 <div><img src={Laminaat} /></div>
                 <div>
-                <h6 className='text-dark ml-4'>LAMINAAT</h6>
-                <p className='text-dark ml-4'>Dit materiaal wordt vaat gebruikt voor het renoverence van de trap. Het voordeel  van laminaat is dat het goedkoper is den de onderstandee materialen. Echter gaat het wel minder lang mee en is 
+                <h6 className='text-dark ml-0 ml-md-4'>LAMINAAT</h6>
+                <p className='text-dark ml-0 ml-md-4'>Dit materiaal wordt vaat gebruikt voor het renoverence van de trap. Het voordeel  van laminaat is dat het goedkoper is den de onderstandee materialen. Echter gaat het wel minder lang mee en is 
                 is laminaat van zichzelf verij glad.
                  </p>
                  </div>
-            </Col> 
-            <Col lg='6' md='6' className='d-flex justify-content-between'>
+            </Col>   
+            <Col lg='6' md='6' sm='12' className='d-flex justify-content-between'>
             <div><img src={hpl} /></div>
             <div>
-            <h6 className='text-dark ml-4'>HPL/CPL</h6>
-                <p className='text-dark ml-4'>Het meest gekozen materiaal bij traprenovatie is HPL/CPL. Dit is een vorm van laminaat die special is 
+            <h6 className='text-dark ml-0 ml-md-4'>HPL/CPL</h6>
+                <p className='text-dark ml-0 ml-md-4'>Het meest gekozen materiaal bij traprenovatie is HPL/CPL. Dit is een vorm van laminaat die special is 
                 ontwikkeld voor het renoverence van de trap. Het is slijvast, erg duurazaam en bevat enn aluminium legering.
                 Deze legering zorgt ervoor dat de treden van zichzelf stroef zin en je een zeer goede grip hebt op de trap. 
                   </p>
                   </div>
             </Col>
             </Row>
-            <Row className='float-right'>
-            <Col lg='6' md='6' className='d-flex justify-content-between'>
+            <Row className='p-0'>
+            <Col lg='6' md='6' sm='12' className='d-flex justify-content-between'>
             <div><img src={Hout} /></div>
             <div>
             <h6 className='text-dark ml-4'>HOUT</h6>
@@ -57,7 +60,7 @@ const HeroSection = props => {
                 </p>
             </div>
             </Col>
-            <Col lg='6' md='6' className='d-flex justify-content-between'>
+            <Col lg='6' md='6' sm='12' className='d-flex justify-content-between'>
                 <div><img src={PVC} /></div>
                 <div>
             <h6 className='text-dark ml-4'>PVC</h6>
@@ -72,7 +75,9 @@ const HeroSection = props => {
            GRATIS OFFERTES VERGELIJKN -{'>'}
         </Button>
         </div>
-        </div>
+        {/* </div> */}
+        </Col>
+        </Row>
        </Container> 
          <br />	  
 		</>
