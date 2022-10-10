@@ -6,13 +6,15 @@ import { COMMENT_KEYS } from '@babel/types';
 const Footer = props => {
 	return (
 		<>
+   
         <div className='bg-site-primary'>
+        <Container>
+          <div className='mx-5'>
           <div className='text-center'> 
           <img src={HeroTextTopLogo} className='mt-2 text-center ' />
           <p className='text-muted font-weight-normal mt-2'>Offertevergelijker is de vergelijkingswebsite voor bouw- en verbouwklussen van Nederland.</p>
-
-         
           <Container>
+            <div className='mx-5'>
           <hr height='14%' width='100%' color='white' />
             <Row className='text-center text-light justify-content-center text-muted'>
                 <div className='m-2'>
@@ -31,8 +33,11 @@ const Footer = props => {
                 Contact
                 </div> 
             </Row>
+            </div>
           </Container>
           </div>
+          </div>
+          </Container>
         </div>
 		</>
 	);

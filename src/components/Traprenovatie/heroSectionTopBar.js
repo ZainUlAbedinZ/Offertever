@@ -11,33 +11,35 @@ const MainNavbar = props => {
 		<>
   <Container className='text-center'>
   
-  <Row className='justify-content-end w-100 hero_section_topBar '>
+  <Row className='align-content-sm-start w-75 hero_section_topBar '>
       {/* <div className='m-2 fw-600 fs-3 text-center py-5 '> */}
         
-        <Col lg='3' md='3' sm='3' className='py-5 d-flex justify-content-between hero_section_topBar_column'>
-        <img src={Checkbox} color='light' width='40px' height='40px' className='text-light' /> 
+        <Col lg='3' md='3' sm='3' className='py-2  py-md-5  d-flex flex-fill justify-content-evenly hero_section_topBar_column'>
+        <img src={Checkbox} color='light'  className='text-light h-50 w-25' /> 
+        {/* width='20px' height='20px' */}
            <strong className='d-inline-block text-left ml-2'>GRATIS en VERGELIJKN vergelijken </strong> 
            {/* className='fw-700 fs-4 ml-2 ' */}
           </Col>
       {/* </div> */}
       {/* <div  className='m-2 fw-600 fs-3 text-center py-5 '>  */}
-      <Col lg='3' md='3' sm='3' className='py-5 d-flex justify-content-between hero_section_topBar_column'>
-      <img src={Checkbox} color='light' width='40px' height='40px' className='text-light' /> 
-     <strong className='d-inline-block text-left ml-2'>BESPAAR 30% in slechts 2 minuten</strong>
+      <Col lg='3' md='3' sm='3' className='py-3 py-md-5 d-flex flex-fill justify-content-evenly hero_section_topBar_column'>
+      <img src={Checkbox} color='light'  className='text-light h-50 w-25' /> 
+      {/* width='20px' height='20px' */}
+     <strong className='d-inline-block text-left ml-2'>BESPAAR 30% in<span className='fs-6'>slechts 2 minuten</span></strong>
       </Col>
       {/* <div  className='m-2 fw-600 fs-3 text-center py-5 '> */}
-      <Col lg='3' md='3' sm='3' className='py-5 d-flex justify-content-between hero_section_topBar_column'>
-      <img src={Checkbox} color='light' width='40px' height='40px' className='text-light' /> 
+      <Col lg='3' md='3' sm='3' className='py-3 py-md-5 d-flex flex-fill justify-content-evenly hero_section_topBar_column'>
+      <img src={Checkbox} color='light' className='text-light h-50 w-25' />
+       {/* width='20px' height='20px'  */}
        <strong className='d-inline-block text-left ml-2'>TRAPRENOVATIE al vanaf $ 2.500 </strong>
           </Col>
       {/* <div  className='m-2 fw-600 fs-3 text-center py-5 '> */}
-      <Col lg='3' md='3' sm='3' className='py-5 d-flex justify-content-between hero_section_topBar_column'>
-       <img src={Checkbox} color='light' width='40px' height='40px' className='text-light text-left' /> 
+      <Col lg='3' md='3' sm='3' className='py-3 py-md-5 d-flex flex-fill justify-content-evenly hero_section_topBar_column'>
+       <img src={Checkbox} color='light' className='text-light h-50 w-25 text-left' /> 
+       {/*  width='20px' height='20px' */}
        <strong className='d-inline-block text-left ml-2'>Binnen 1WERKDAG geplaatst</strong>
       </Col>
   </Row>
- 
-  
   </Container>
 
 		</>

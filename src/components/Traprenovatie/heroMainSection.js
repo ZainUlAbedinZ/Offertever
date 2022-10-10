@@ -9,23 +9,27 @@ const HeroSection = props => {
 		<>
         {/* Flex Container */}
           <Container className='hero_section_main_content'>
+            <div className='mx-4'>
 		<h3 className='text-dark text-center pt-1'>TRAPRENOVATIE OFFERTES VERGELIJKN</h3>
         <hr height='50px' width='90px' color='#FF4500'/>
         <h5 className='text-site-text text-center text-bold  fs-2'>Populairste materialen traprenovatie</h5>
-        <p className='text-site-text text-center'>
+        <p className='text-site-text text-center pr-3'>
         Voorhen werd er vaak gekozen om de trap te bekleden met tapijt of hem te schildrence. Deze opties tonens
         echtar snel gebruiksspen, waardon de trap slordig oogt. Tegenwoordig kiest men het meest voor trapbekleding van
         laminaat, HPL/CPL, PVC of hout. Dit ziet er niet allen ontzettened strack uit wanneer het wordt geplaatst; het 
         blijft deze nieuwe look ook nog vele jaren houden!
         </p>
+        </div>
         </Container>
         <br />
-       <Container>  
-        <Row>
+        {/* margin-left: 117px !important; */}
+       <Container className='ml-0 ml-md-5 d-block p-0 hero_section_main_content_Container2' >  
+       <div className='ml-0 ml-md-5'>
+        <Row className='text-end ms-auto p-0 float-right'>
             <Col lg='6' md='6' className='d-flex justify-content-between'>
                 <div><img src={Laminaat} /></div>
                 <div>
-                <h4 className='text-dark ml-4'>LAMINAAT</h4>
+                <h6 className='text-dark ml-4'>LAMINAAT</h6>
                 <p className='text-dark ml-4'>Dit materiaal wordt vaat gebruikt voor het renoverence van de trap. Het voordeel  van laminaat is dat het goedkoper is den de onderstandee materialen. Echter gaat het wel minder lang mee en is 
                 is laminaat van zichzelf verij glad.
                  </p>
@@ -34,7 +38,7 @@ const HeroSection = props => {
             <Col lg='6' md='6' className='d-flex justify-content-between'>
             <div><img src={hpl} /></div>
             <div>
-            <h4 className='text-dark ml-4'>HPL/CPL</h4>
+            <h6 className='text-dark ml-4'>HPL/CPL</h6>
                 <p className='text-dark ml-4'>Het meest gekozen materiaal bij traprenovatie is HPL/CPL. Dit is een vorm van laminaat die special is 
                 ontwikkeld voor het renoverence van de trap. Het is slijvast, erg duurazaam en bevat enn aluminium legering.
                 Deze legering zorgt ervoor dat de treden van zichzelf stroef zin en je een zeer goede grip hebt op de trap. 
@@ -42,11 +46,11 @@ const HeroSection = props => {
                   </div>
             </Col>
             </Row>
-            <Row>
+            <Row className='float-right'>
             <Col lg='6' md='6' className='d-flex justify-content-between'>
             <div><img src={Hout} /></div>
             <div>
-            <h4 className='text-dark ml-4'>HOUT</h4>
+            <h6 className='text-dark ml-4'>HOUT</h6>
                 <p className='text-dark ml-4'>Overzetterden van hout bieden een klassieke warme look. Ze zijn slijvast en erg sfeervol.
                 Het nadeel van hout is dat dit materiaal aanzienlijk duurder is dan andere opties en daarnaast relatief veel periodiek
                 onderhoud vereist.
@@ -56,7 +60,7 @@ const HeroSection = props => {
             <Col lg='6' md='6' className='d-flex justify-content-between'>
                 <div><img src={PVC} /></div>
                 <div>
-            <h4 className='text-dark ml-4'>PVC</h4>
+            <h6 className='text-dark ml-4'>PVC</h6>
                 <p className='text-dark ml-4'>PVC (kunststof) heeft als grote voordeel dat het een geluiddempend effect heeft. Daarnaast is het verkrijgbaar
                 in vele printen en bestand tegend vochet.</p>
                 </div>
@@ -67,6 +71,7 @@ const HeroSection = props => {
         <Button className='mx-auto bg-site-orange text-light'>
            GRATIS OFFERTES VERGELIJKN -{'>'}
         </Button>
+        </div>
         </div>
        </Container> 
          <br />	  

@@ -9,8 +9,9 @@ const Testimonial = props => {
 		
 		 {/* Testimonial */}
          <Container className='bg-white'>
+            <div className='mx-5'>
             <h5 className='text-center py-3'>Meer dan <strong className='text-primary'>109.00</strong> tevredence klanten</h5>
-             <Row>
+             <Row className='ml-3'>
                 <Col lg='6'>
                 <div className='text-center h-3'>
                 <img src={RatingStar1}  className='fs-1 text-center'/>
@@ -30,6 +31,7 @@ const Testimonial = props => {
                </p>
                 </Col>
              </Row>
+             </div>
          </Container>
 		  
 		</>

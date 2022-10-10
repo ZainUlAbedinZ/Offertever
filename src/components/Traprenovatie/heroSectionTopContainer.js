@@ -61,7 +61,7 @@ const heroSectionTopContainer = props => {
 						</Col>
 						</Row>
 						<Card
-                       className="px-3 mt-3 mb-3 bg-site-primary w-100 w-md-75 w-lg-75  hero_section_col_2_Card"
+                       className="px-3 mt-3 mb-3 bg-site-primary w-xs-100 w-sm-100 w-md-75 w-lg-75  hero_section_col_2_Card"
                     >
 						{/*  style={{width: '30rem'}} */}
                    <CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85 hero_section_col_2_Card_header'> 

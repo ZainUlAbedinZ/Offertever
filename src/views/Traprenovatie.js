@@ -16,7 +16,7 @@ const Traprenovatie = props => {
 		<>
 			{/* Container */}
 			<Container className='hero_section' fluid>
-				<HeroSectionTopContainer />
+				<HeroSectionTopContainer  />
 		      </Container>
 		{/* Flex  */}
 		      <Container className='bg-site-Mainbar-color' fluid>
