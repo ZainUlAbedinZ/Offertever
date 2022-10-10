@@ -27,7 +27,7 @@ const heroSectionTopContainer = props => {
 						<img src={heroTextLogo} className='pl-3 pl-md-0  float-right' rounded width='130px' />
 						</div>
 						<div className='p-0 fs-5'>
-						<h4 className='pl-0 fs-3 pl-md-0 text-light text-left fw-600'>
+						<h4 className='pl-4 pl-md-0 fs-3 pl-md-0 text-light text-left fw-600'>
 							Gratis en Vrijblijvend <br />
 						 <span className='w-100'>offertes aanvragen bij een <br/> </span> 
 							netwerk van Speicallisten ?
@@ -56,10 +56,10 @@ const heroSectionTopContainer = props => {
 						<br />
 						{/* Text Top Header */}
 						<p className='fs-1 mt-3 hero_section_col_2_text1'>
-					   <span className='text-site-orange '>Bespaar 30%</span>
+					   <span className='text-site-orange fs-3'>Bespaar 30%</span>
 						<span className='text-light font-weight-normal fs-3'>in slechts 2 minuten</span> 
 						<br />
-						<span className='font-weight-bold fs-1 text-site-text'>Vraag nu voor gratis offertes  aan voor jouw</span><span className='text-site-orange fs-1'> TRAPRENOVATIE </span> 
+						<span className='font-weight-bold fs-2 text-site-text'>Vraag nu voor gratis offertes  aan voor jouw</span><span className='text-site-orange fs-2'> TRAPRENOVATIE </span> 
 						</p>
 						{/* </Col> */}
 						{/* </Row> */}
