@@ -9,7 +9,7 @@ const Testimonial = props => {
 		
 		 {/* Testimonial */}
          <Container className='bg-white'>
-            <div className='mx-5'>
+            <div className='mx-5 px-5'>
             <h5 className='text-center py-3'>Meer dan <strong className='text-primary'>109.00</strong> tevredence klanten</h5>
              <Row className='ml-3'>
                 <Col lg='6'>

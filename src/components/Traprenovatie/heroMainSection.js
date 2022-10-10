@@ -10,10 +10,10 @@ const HeroSection = props => {
         {/* Flex Container */}
           <Container className='hero_section_main_content'>
             <div className='mx-4'>
-		<h3 className='text-dark text-center pt-1'>TRAPRENOVATIE OFFERTES VERGELIJKN</h3>
+		<h4 className='text-dark text-center pt-4'>TRAPRENOVATIE OFFERTES VERGELIJKN</h4>
         <hr height='50px' width='90px' color='#FF4500'/>
         <h5 className='text-site-text text-center text-bold  fs-2'>Populairste materialen traprenovatie</h5>
-        <p className='text-site-text text-center pr-3'>
+        <p className='text-site-text text-center px-5'>
         Voorhen werd er vaak gekozen om de trap te bekleden met tapijt of hem te schildrence. Deze opties tonens
         echtar snel gebruiksspen, waardon de trap slordig oogt. Tegenwoordig kiest men het meest voor trapbekleding van
         laminaat, HPL/CPL, PVC of hout. Dit ziet er niet allen ontzettened strack uit wanneer het wordt geplaatst; het 
@@ -23,7 +23,7 @@ const HeroSection = props => {
         </Container>
         <br />
         {/* margin-left: 117px !important; */}
-       <Container className='ml-0 ml-md-5 d-block p-0 hero_section_main_content_Container2' >  
+       <Container className='ml-0 ml-md-5 d-block px-5 hero_section_main_content_Container2' >  
        <div className='ml-0 ml-md-5'>
         <Row className='text-end ms-auto p-0 float-right'>
             <Col lg='6' md='6' className='d-flex justify-content-between'>

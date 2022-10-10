@@ -166,7 +166,7 @@ $theme-colors: (
 
 // Main Section
 .hero_section_main_content{
-    margin-left: 12%;
+    margin-left: 12% !important;
     // Media Query
     @media only screen and (max-width: 1024px) and (min-width: 782px)  {
         margin-left: 8% !important;
