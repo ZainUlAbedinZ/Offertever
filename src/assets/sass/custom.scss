@@ -41,6 +41,40 @@ $theme-colors: (
 //     }
 // }
 
+html {
+	font-size: 18px;
+	@media (max-width: 1799.98px) {
+		font-size: 17px;
+	}
+	@media (max-width: 1399.98px) {
+		font-size: 16px;
+	}
+	@media (max-width: 1199.98px) {
+		font-size: 13px;
+	}
+	@media (max-width: 991.98px) {
+		font-size: 12px;
+	}
+	@media (max-width: 567.98px) {
+		font-size: 11px;
+	}
+}
+$weights: 100 200 300 400 500 600 700 800;
+@each $weight in $weights {
+	.fw--#{$weight} {
+		font-weight: $weight;
+	}
+}
+@for $size from 12 through 96 {
+	.fs--#{$size} {
+		font-size: $size/16 + rem;
+	}
+}
+
+small{
+    font-size: 9px;
+}
+
 .hero_section{
     background-image: url('../img/bg_img.png');
     background-repeat: no-repeat;

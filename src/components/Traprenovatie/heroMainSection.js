@@ -12,7 +12,7 @@ const HeroSection = props => {
             <Row className='justify-content-end'>
                 <Col md='9' sm='12'>
 		<h4 className='text-dark text-center pt-4'>TRAPRENOVATIE OFFERTES VERGELIJKN</h4>
-        <hr height='50px' width='90px' color='#FF4500'/>
+        <hr height='50px' width='90px' color='#FF4500' />
         <h5 className='text-site-text text-center text-bold  fs-2'>Populairste materialen traprenovatie</h5>
         <p className='text-site-text text-center'>
         Voorhen werd er vaak gekozen om de trap te bekleden met tapijt of hem te schildrence. Deze opties tonens

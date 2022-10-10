@@ -24,10 +24,10 @@ const heroSectionTopContainer = props => {
 							 {/* <Row className='mt-1'> */}
 						{/* <Col md='12' lg='12' sm='12' className='p-0'> */}
 							<div>
-						<img src={heroTextLogo} className='pl-3 pl-md-0  float-right' rounded width='130px' />
+						<img src={heroTextLogo} className='pl-3 d-none d-md-flex pl-md-0  float-right' rounded width='130px' />
 						</div>
 						<div className='p-0 fs-5'>
-						<h4 className='pl-4 pl-md-0 fs-3 pl-md-0 text-light text-left fw-600'>
+						<h4 className='pl-4 pl-md-0 fs-3 pl-md-0 text-light text-left mt-3 fw--800'>
 							Gratis en Vrijblijvend <br />
 						 <span className='w-100'>offertes aanvragen bij een <br/> </span> 
 							netwerk van Speicallisten ?
@@ -51,10 +51,10 @@ const heroSectionTopContainer = props => {
 						<br />
 						{/* Text Top Header */}
 						<p className='fs-1 mt-3 hero_section_col_2_text1'>
-					   <span className='text-site-orange fs-1 fw-800'>Bespaar 30%</span>
-						<span className='text-light font-weight-normal fs-3'>in slechts 2 minuten</span> 
+					   <span className='text-site-orange fs--30 fw--700'>Bespaar 30%</span>
+						<span className='text-light font-weight-normal fs--20 fw--300'>in slechts 2 minuten</span> 
 						<br />
-						<span className='font-weight-bold fs-2 text-site-text'>Vraag nu voor gratis offertes  aan voor jouw</span><span className='text-site-orange fs-2'> TRAPRENOVATIE </span> 
+						<span className='font-weight-bold fs--30 fw--700 text-site-text'>Vraag nu voor gratis offertes  aan voor jouw</span><span className='text-site-orange fs--30 fw--700'> TRAPRENOVATIE </span> 
 						</p>
 
 						<Card
@@ -63,40 +63,39 @@ const heroSectionTopContainer = props => {
 						{/*  style={{width: '30rem'}} */}
                    <CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85 hero_section_col_2_Card_header'> 
                  	<Col md='8' lg='8' sm='8' className='p-0' >
-                   <p className='w-100'>Naar wie mongen we <br /> 
+                   <p className='w-100 fs--20 fw--400'>Naar wie mongen we <br /> 
                            de Gratis offertes sturen? </p>
                       </Col>
     <Col md='4' lg='4' sm='4'>
     <img  className='float-right' src={ThumbsUp} alt="Card image cap" />
-   {/* width="75rem" */}
     </Col>
     </CardHeader>
     <CardBody color='text-light hero_section_col_2_Card_body'>
      <CardText className='hero_section_col_2_Card_body_text' >
 	 <Row className='justify-content-center'>
 	  <Col className='p-0 w-100 w-md-25' lg='3' md='3' sm='4'>
-      <Label className='text-light'>Postcode</Label>
+      <Label className='text-light fs--16 fw--600'>Postcode</Label>
 	  <Input type='text' className='w-100'  />
 	  </Col>
 	  <Col className='px-0 px-md-2' lg='6' md='6' sm='4'>
-      <Label className='text-light'>Straat</Label>
+      <Label className='text-light fs--16 fw--600'>Straat</Label>
 	  <Input type='text' className='w-100' />
 	  </Col>
 	  <Col className='p-0 w-100 w-md-25' lg='3' md='3' sm='4'>
-      <Label className='text-light'>Huisnument</Label>
+      <Label className='text-light fs--16 fw--600'>Huisnument</Label>
 	  <Input type='text' className='w-100' />
 	  </Col>
 	  </Row>
       {/* nEW rOW  */}
       <Row>
       <Col className='p-0'>
-	  <Label className='text-light pt-2'>WoonPlates</Label>
+	  <Label className='text-light pt-2 fs--16 fw--600'>WoonPlates</Label>
 	  <Input type='text' />
 	  </Col>
       </Row>
 	  <Row>
 	  {/* <Col className='p-0'> */}
-	  <small className='text-light font-weight-lighter mt-3'>
+	  <small className='text-light font-weight-lighter mt-3 d-block fw--100'>
     Door vrijblijvend offertes aan te vragen ga je akhoord met onze 
     <a className='text-primary pl-1'>algemene voorwaarden</a>
       </small>
@@ -104,7 +103,7 @@ const heroSectionTopContainer = props => {
 	  </Row>
     </CardText>
     <div className='text-center'>
-    <Button className='bg-site-orange text-light'>
+    <Button className='bg-site-orange text-light fs--16 fw--400'>
      GRATIS OFFERTES VERGELIJKN -{'>'}
     </Button>
     </div>
