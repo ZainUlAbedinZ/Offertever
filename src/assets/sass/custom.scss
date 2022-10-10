@@ -29,6 +29,18 @@ $theme-colors: (
 // 48cae4
 @import 'node_modules/bootstrap/scss/bootstrap';
 
+
+// @for $i from 10 through 96 {
+//     .fs--#($i){
+//         font-size: $i + px;
+//     }
+// }
+// @for $i from 1 through 9 {
+//     .fw--#($i * 100){
+//         font-weight: $i*100;
+//     }
+// }
+
 .hero_section{
     background-image: url('../img/bg_img.png');
     background-repeat: no-repeat;

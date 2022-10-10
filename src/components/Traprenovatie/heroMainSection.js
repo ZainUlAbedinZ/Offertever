@@ -53,8 +53,8 @@ const HeroSection = props => {
             <Col lg='6' md='6' sm='12' className='d-flex justify-content-between'>
             <div><img src={Hout} /></div>
             <div>
-            <h6 className='text-dark ml-4'>HOUT</h6>
-                <p className='text-dark ml-4'>Overzetterden van hout bieden een klassieke warme look. Ze zijn slijvast en erg sfeervol.
+            <h6 className='text-dark ml-0 ml-md-4'>HOUT</h6>
+                <p className='text-dark ml-0 ml-md-4'>Overzetterden van hout bieden een klassieke warme look. Ze zijn slijvast en erg sfeervol.
                 Het nadeel van hout is dat dit materiaal aanzienlijk duurder is dan andere opties en daarnaast relatief veel periodiek
                 onderhoud vereist.
                 </p>
@@ -63,8 +63,8 @@ const HeroSection = props => {
             <Col lg='6' md='6' sm='12' className='d-flex justify-content-between'>
                 <div><img src={PVC} /></div>
                 <div>
-            <h6 className='text-dark ml-4'>PVC</h6>
-                <p className='text-dark ml-4'>PVC (kunststof) heeft als grote voordeel dat het een geluiddempend effect heeft. Daarnaast is het verkrijgbaar
+            <h6 className='text-dark  ml-0 ml-md-4'>PVC</h6>
+                <p className='text-dark  ml-0 ml-md-4'>PVC (kunststof) heeft als grote voordeel dat het een geluiddempend effect heeft. Daarnaast is het verkrijgbaar
                 in vele printen en bestand tegend vochet.</p>
                 </div>
             </Col>

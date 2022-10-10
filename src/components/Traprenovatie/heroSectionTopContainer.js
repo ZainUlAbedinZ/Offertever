@@ -51,7 +51,7 @@ const heroSectionTopContainer = props => {
 						<br />
 						{/* Text Top Header */}
 						<p className='fs-1 mt-3 hero_section_col_2_text1'>
-					   <span className='text-site-orange fs-3'>Bespaar 30%</span>
+					   <span className='text-site-orange fs-1 fw-800'>Bespaar 30%</span>
 						<span className='text-light font-weight-normal fs-3'>in slechts 2 minuten</span> 
 						<br />
 						<span className='font-weight-bold fs-2 text-site-text'>Vraag nu voor gratis offertes  aan voor jouw</span><span className='text-site-orange fs-2'> TRAPRENOVATIE </span> 
