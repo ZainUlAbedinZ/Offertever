@@ -9,7 +9,9 @@ const Testimonial = props => {
 		
 		 {/* Testimonial */}
          <Container className='bg-white'>
-            <Row className='justify-content-end'>
+            {/* justify-content-end */}
+            
+            <Row className='justify-content-center'>
             <Col md='9' sm='12'>
             <h5 className='text-center py-3'>Meer dan <strong className='text-primary'>109.00</strong> tevredence klanten</h5>
              <Row>
@@ -26,7 +28,7 @@ const Testimonial = props => {
                   <div className='text-center h-3'>
                 <img src={RatingStar2}  className='fs-1 text-center'/>
                 </div>
-               <h5 className='text-center'> Simpel, snap en goed </h5>
+               <h5 className='text-center'>Simpel, snap en goed</h5>
                <p className='text-muted py-3'>Eenvoudige onze wensen doorgegen. IK ben goed op de hoogte gehouden m.b.t de status van mijn aanvraag.
                Snel benaderd door bedrijven en snel afsparken kunnen maken.
                </p>
@@ -35,7 +37,6 @@ const Testimonial = props => {
              </Col>
              </Row>
          </Container>
-		  
 		</>
 	);
 };

@@ -32,7 +32,7 @@ const Traprenovatie = props => {
 	         </Container>
 			 {/* Footer */}
 		             <Footer />
-		  <br />
+		 
 		</>
 	);
 };

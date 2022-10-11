@@ -12,33 +12,20 @@ const heroSectionTopContainer = props => {
 	return (
 		<>
         <Container>
-				<Row className='align-items-end justify-content-end' >
-					<Col  md='5' xs='12' className='hero_section_col_1 px-3 align-items-end order-2 justify-content-end order-sm-2 order-md-1 order-xs-2 mr-5'>
-						{/* <div className='text-right pt-39 hero_section_col_1_text'> */}
-						{/* <Row className='mt-5 mt-sm-2 justify-content-end'> */}
-							{/* <Col md='3' className='d-md-3'>
-								
-							</Col> */}
-							{/* <Col md='9' className='hero_section_col_1_text justify-content-end'> */}
-							{/* <div className='d-block'>  */}
-							 {/* <Row className='mt-1'> */}
-						{/* <Col md='12' lg='12' sm='12' className='p-0'> */}
+			{/* justify-content-end */}
+				<Row className='align-items-end justify-content-center' >
+					<Col  md='5' xs='12' className=' px-3 align-items-end order-2 justify-content-end order-sm-2 order-md-1 order-xs-2 mr-5'>
 							<div>
 						<img src={heroTextLogo} className='pl-3 d-none d-md-flex pl-md-0  float-right' rounded width='130px' />
 						</div>
-						<div className='p-0 fs-5'>
+						<div className='p-0 mt-5 fs-5'>
 						<h4 className='pl-4 pl-md-0 fs-3 pl-md-0 text-light text-left mt-3 fw--800'>
 							Gratis en Vrijblijvend <br />
 						 <span className='w-100'>offertes aanvragen bij een <br/> </span> 
 							netwerk van Speicallisten ?
 						</h4>
-						
-							{/* </Col> */}
-							{/* <p className='text-light text-justify mt-1 mb-0 font-weight-normal w-100'> */}
-							{/* <p className='text-light'></p> */}
-                               {/* </p > */}
-                            <p className='pl-3 pl-md-0 pl-md-0 fs-5 pr-5 pr-md-3 text-justify text-light fw-100 shadow-sm'>
-                            <span className='w-75 font-weight-bold'> Zo krijg je de beste prijs voor jouw traprenovatie! 
+                            <p className='pl-4 pl-md-0 pl-md-0 fs-5 pr-md-5 pr-md-3 text-justify text-light fw-100 shadow-sm'>
+                            <span className='w-75 font-weight-bold'>Zo krijg je de beste prijs voor jouw traprenovatie! 
                             </span>
                                 .Is jouw trap ook toe aan een opknapbeaurt? Dan is dit jouw kans.Het
 							Kost je niets en je zit nergens aan vast. Zo kies jij zelf de bestie aanbieder.

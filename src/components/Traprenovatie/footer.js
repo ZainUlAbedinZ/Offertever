@@ -9,7 +9,8 @@ const Footer = props => {
    
         <div className='bg-site-primary'>
         <Container>
-          <Row className='justify-content-end'>
+          {/* justify-content-end */}
+          <Row className='justify-content-center'>
             <Col md='9' sm='12'>
           {/* <div className='mx-md-5 px-md-5'> */}
           <div className='text-center'> 

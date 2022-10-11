@@ -79,8 +79,11 @@ small{
     background-image: url('../img/bg_img.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding-left: 12%;
-    background-position: left bottom;
+    // padding-left: 12%;
+    background-position:center;
+    // background-position: left bottom;
+    // background-size: cover;
+    background-clip: padding-box
 
     // &_col_1 {
     //     // padding: 0 !important;
