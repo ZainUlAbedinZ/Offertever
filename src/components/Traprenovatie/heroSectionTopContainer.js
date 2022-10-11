@@ -19,13 +19,15 @@ const heroSectionTopContainer = props => {
 							<div>
 						<img src={heroTextLogo} className='pl-3 d-none d-md-flex pl-md-0  float-right' rounded width='130px' />
 						</div>
-						<div className='p-0 mt-5 fs-5'>
-						<h4 className='pl-4 pl-md-0 fs-3 pl-md-0 text-light text-left mt-3 fw--800'>
+						<div className='p-0 justify-content-center mt-5 fs-5'>
+						{/* pl-4 */}
+						<h4 className=' pl-md-0 fs-3 pl-md-0 text-light text-left mt-3 fw--800'>
 							Gratis en Vrijblijvend <br />
 						 <span className='w-100'>offertes aanvragen bij een <br/> </span> 
 							netwerk van Speicallisten ?
 						</h4>
-                            <p className='pl-4 pl-md-0 pl-md-0 fs-5 pr-md-5 pr-md-3 text-justify text-light fw-100 shadow-sm'>
+						{/* pl-4 */}
+                            <p className=' pl-md-0 pl-md-0 fs-5 pr-md-5 pr-md-3 text-justify text-light fw-100 shadow-sm'>
                             <span className='w-75 font-weight-bold'>Zo krijg je de beste prijs voor jouw traprenovatie! 
                             </span>
                                 .Is jouw trap ook toe aan een opknapbeaurt? Dan is dit jouw kans.Het

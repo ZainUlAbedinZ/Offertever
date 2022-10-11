@@ -74,6 +74,7 @@ const HeroSection = props => {
                 </p>
             </div>
             </Col>
+            
             <Col lg='6' md='6' sm='12' className='d-flex justify-content-between'>
             {/* width='36px' */}
                 <div><img src={PVC}  /></div>
