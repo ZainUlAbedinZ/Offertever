@@ -10,44 +10,49 @@ const MainNavbar = props => {
 	return (
 		<>
   <Container>
-{/*  */}
-  <Row className=' w-100 flex-wrap flex-stretch'>
+{/* justify-content-center */}
+  <Row className='justify-content-center w-100 flex-wrap flex-stretch'>
     {/* md='9 */}
         <Col md='11' sm='12' className='d-md-flex d-col'>
             
-    <Col lg='3' md='3' sm='8' className='py-2  py-md-4  d-flex'>
+    <Col lg='3' md='3' sm='8' className='py-2 py-md-4  d-flex'>
        <div >
          {/*className='w-50'  */}
        {/* h-50 w-25 */}
         <img src={Checkbox} color='light' className='text-light' /> 
-       </div>
-           <div><strong className='d-inline-block text-left'>GRATIS en VERGELIJKN vergelijken </strong> 
-           </div>
+       </div >
+       <div className='ml-2'>
+         <p className='fw--700'>GRATIS en VERGELIJKN vergelijken </p> 
+        </div>
           </Col>
-      <Col lg='3' md='3' sm='8' className='py-2  py-md-4 d-flex '>
+      <Col lg='3' md='3' sm='8' className='py-2 py-md-4 d-flex '>
         {/* h-50 w-25 */
         }
         {/* className='w-50' */}
         <div >
       <img src={Checkbox} color='light'  className='text-light ' /> 
       </div>
-     <strong className='d-inline-block text-left'>BESPAAR 30% in<span className='fs-6'>slechts 2 minuten</span></strong>
+      <div className='ml-2'>
+     <p className='fw--700'>BESPAAR 30% in<span className='fs-6'>slechts 2 minuten</span></p>
+     </div>
       </Col>
-      <Col lg='3' md='3' sm='8' className='py-2  py-md-4  d-flex '>
-        <div >
+      <Col lg='3' md='3' sm='8' className='py-2 py-md-4  d-flex '>
+        <div>
             {/* className='w-50' */}
             {/*  h-50 w-25 */}
       <img src={Checkbox} color='light' className='text-light' />
       </div>
-       <strong className='d-inline-block text-left'>TRAPRENOVATIE al vanaf $ 2.500 </strong>
+      <div className='ml-2'>
+       <p className='fw--700'>TRAPRENOVATIE al vanaf $ 2.500 </p>
+       </div>
           </Col>
       <Col lg='3' md='3' sm='8' className='py-2  py-md-4  d-flex'>
       <div >
-        {/* className='w-50' */}
-        {/*  h-50 w-25 */}
        <img src={Checkbox} color='light' className='text-light text-left' /> 
        </div>
-       <strong className='d-inline-block text-left'>Binnen 1WERKDAG geplaatst</strong>
+       <div className='ml-2'>
+       <p className='fw--700'>Binnen 1WERKDAG geplaatst</p>
+       </div>
       </Col>
       </Col>      
   </Row>

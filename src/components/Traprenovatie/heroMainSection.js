@@ -44,8 +44,8 @@ const HeroSection = props => {
                     <img src={Laminaat} />
                     </div>
                 <div>
-                <h6 className='text-dark ml-0 ml-md-4'>LAMINAAT</h6>
-                <p className='text-dark ml-0 ml-md-4'>Dit materiaal wordt vaat gebruikt voor het renoverence van de trap. Het voordeel  van laminaat is dat het goedkoper is den de onderstandee materialen. Echter gaat het wel minder lang mee en is 
+                <h6 className='text-dark ml-2 ml-md-4'>LAMINAAT</h6>
+                <p className='text-dark ml-2 ml-md-4'>Dit materiaal wordt vaat gebruikt voor het renoverence van de trap. Het voordeel  van laminaat is dat het goedkoper is den de onderstandee materialen. Echter gaat het wel minder lang mee en is 
                 is laminaat van zichzelf verij glad.
                  </p>
                  </div>
@@ -54,8 +54,8 @@ const HeroSection = props => {
             {/* width='36px' */}
             <div><img src={hpl}  /></div>
             <div>
-            <h6 className='text-dark ml-0 ml-md-4'>HPL/CPL</h6>
-                <p className='text-dark ml-0 ml-md-4'>Het meest gekozen materiaal bij traprenovatie is HPL/CPL. Dit is een vorm van laminaat die special is 
+            <h6 className='text-dark ml-2 ml-md-4'>HPL/CPL</h6>
+                <p className='text-dark ml-2 ml-md-4'>Het meest gekozen materiaal bij traprenovatie is HPL/CPL. Dit is een vorm van laminaat die special is 
                 ontwikkeld voor het renoverence van de trap. Het is slijvast, erg duurazaam en bevat enn aluminium legering.
                 Deze legering zorgt ervoor dat de treden van zichzelf stroef zin en je een zeer goede grip hebt op de trap. 
                   </p>
@@ -67,8 +67,8 @@ const HeroSection = props => {
             {/* width='36px' */}
             <div><img src={Hout}  /></div>
             <div>
-            <h6 className='text-dark ml-0 ml-md-4'>HOUT</h6>
-                <p className='text-dark ml-0 ml-md-4'>Overzetterden van hout bieden een klassieke warme look. Ze zijn slijvast en erg sfeervol.
+            <h6 className='text-dark ml-2 ml-md-4'>HOUT</h6>
+                <p className='text-dark ml-2 ml-md-4'>Overzetterden van hout bieden een klassieke warme look. Ze zijn slijvast en erg sfeervol.
                 Het nadeel van hout is dat dit materiaal aanzienlijk duurder is dan andere opties en daarnaast relatief veel periodiek
                 onderhoud vereist.
                 </p>
@@ -78,8 +78,8 @@ const HeroSection = props => {
             {/* width='36px' */}
                 <div><img src={PVC}  /></div>
                 <div>
-            <h6 className='text-dark  ml-0 ml-md-4'>PVC</h6>
-                <p className='text-dark  ml-0 ml-md-4'>PVC (kunststof) heeft als grote voordeel dat het een geluiddempend effect heeft. Daarnaast is het verkrijgbaar
+            <h6 className='text-dark  ml-2 ml-md-4'>PVC</h6>
+                <p className='text-dark  ml-2 ml-md-4'>PVC (kunststof) heeft als grote voordeel dat het een geluiddempend effect heeft. Daarnaast is het verkrijgbaar
                 in vele printen en bestand tegend vochet.</p>
                 </div>
             </Col>

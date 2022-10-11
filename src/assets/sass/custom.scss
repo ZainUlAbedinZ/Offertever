@@ -30,16 +30,6 @@ $theme-colors: (
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 
-// @for $i from 10 through 96 {
-//     .fs--#($i){
-//         font-size: $i + px;
-//     }
-// }
-// @for $i from 1 through 9 {
-//     .fw--#($i * 100){
-//         font-weight: $i*100;
-//     }
-// }
 
 html {
 	font-size: 18px;

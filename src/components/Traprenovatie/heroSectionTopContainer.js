@@ -14,7 +14,8 @@ const heroSectionTopContainer = props => {
         <Container>
 			{/* justify-content-end */}
 				<Row className='align-items-end justify-content-center' >
-					<Col  md='5' xs='12' className=' px-3 align-items-end order-2 justify-content-end order-sm-2 order-md-1 order-xs-2 mr-5'>
+					{/* mr-5  px-3 */}
+					<Col  md='5' xs='12' className='align-items-end order-2 justify-content-end order-sm-2 order-md-1 order-xs-2 '>
 							<div>
 						<img src={heroTextLogo} className='pl-3 d-none d-md-flex pl-md-0  float-right' rounded width='130px' />
 						</div>
@@ -45,7 +46,8 @@ const heroSectionTopContainer = props => {
 						</p>
 
 						<Card
-                       className="px-3 mt-3 mb-3 bg-site-primary w-100 w-sm-100 w-md-75 w-lg-75 w-xl-75  hero_section_col_2_Card"
+						//  w-100 w-sm-100 w-md-75 w-lg-75 w-xl-75
+                       className="px-3 mt-3 mb-3 bg-site-primary  hero_section_col_2_Card"
                     >
 						{/*  style={{width: '30rem'}} */}
                    <CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85 hero_section_col_2_Card_header'> 
