@@ -12,7 +12,6 @@ import {
 	Label,
 	Input,
 } from 'reactstrap';
-// import RatingStar from '../../assets/img/Rating.png';
 import RatingStar1 from '../../assets/img/StarRating1.png';
 import RatingStar2 from '../../assets/img/StarRating2.png';
 
@@ -22,7 +21,6 @@ const Testimonial = props => {
 			{/* Testimonial */}
 			<Container className=''>
 				{/* justify-content-end */}
-
 				<Row className='justify-content-center'>
 					<Col md='9' sm='12'>
 						<h5 className='text-center py-3'>

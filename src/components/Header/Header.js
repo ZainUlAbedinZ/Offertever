@@ -25,9 +25,7 @@ const heroSectionTopContainer = props => {
 	return (
 		<>
 			<Container>
-				{/* justify-content-end */}
 				<Row className='align-items-end justify-content-center'>
-					{/* mr-5  px-3 */}
 					<Col
 						md='5'
 						xs='12'
@@ -42,7 +40,6 @@ const heroSectionTopContainer = props => {
 							/>
 						</div>
 						<div className='p-0 justify-content-center mt-5 fs-5'>
-							{/* pl-4 */}
 							<h4 className=' pl-md-0 fs-3 pl-md-0 text-light text-left mt-3 fw--800'>
 								Gratis en Vrijblijvend <br />
 								<span className='w-100'>
@@ -50,7 +47,6 @@ const heroSectionTopContainer = props => {
 								</span>
 								netwerk van Speicallisten ?
 							</h4>
-							{/* pl-4 */}
 							<p className=' pl-md-0 pl-md-0 fs-5 pr-md-5 pr-md-3 text-justify text-light fw-100 shadow-sm'>
 								<span className='w-75 font-weight-bold'>
 									Zo krijg je de beste prijs voor jouw
@@ -67,7 +63,7 @@ const heroSectionTopContainer = props => {
 					<Col
 						md='5'
 						xs='12'
-						className='hero_section_col_2 align-items-end order-sm-1 order-1 order-md-2 order-xs-1 pl-0 ml-0'
+						className='align-items-end order-sm-1 order-1 order-md-2 order-xs-1 pl-0 ml-0'
 					>
 						<img
 							src={HeroTextTopLogo}
@@ -75,8 +71,7 @@ const heroSectionTopContainer = props => {
 							width='140px'
 						/>
 						<br />
-						{/* Text Top Header */}
-						<p className='fs-1 mt-3 hero_section_col_2_text1'>
+						<p className='fs-1 mt-3'>
 							<span className='text-site-orange fs--30 fw--700'>
 								Bespaar 30%
 							</span>
@@ -84,7 +79,7 @@ const heroSectionTopContainer = props => {
 								in slechts 2 minuten
 							</span>
 							<br />
-							<span className='font-weight-bold fs--30 fw--700 text-site-text'>
+							<span className='font-weight-bold fs--30 fw--700 text-site-primary'>
 								Vraag nu voor gratis offertes aan voor jouw
 							</span>
 							<span className='text-site-orange fs--30 fw--700'>
@@ -95,10 +90,10 @@ const heroSectionTopContainer = props => {
 
 						<Card
 							//  w-100 w-sm-100 w-md-75 w-lg-75 w-xl-75
-							className='px-3 mt-3 mb-3 bg-site-primary  hero_section_col_2_Card'
+							className='px-3 mt-3 mb-3 bg-site-primary'
 						>
 							{/*  style={{width: '30rem'}} */}
-							<CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85 hero_section_col_2_Card_header'>
+							<CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85'>
 								<Col md='8' lg='8' sm='8' className='p-0'>
 									<p className='w-100 fs--20 fw--400'>
 										Naar wie mongen we <br />
@@ -113,8 +108,8 @@ const heroSectionTopContainer = props => {
 									/>
 								</Col>
 							</CardHeader>
-							<CardBody color='text-light hero_section_col_2_Card_body'>
-								<CardText className='hero_section_col_2_Card_body_text'>
+							<CardBody color='text-light'>
+								<CardText>
 									<Row className='justify-content-center'>
 										{/* pr-md-2 */}
 										<Col

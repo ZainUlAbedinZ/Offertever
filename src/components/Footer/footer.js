@@ -36,12 +36,12 @@ const Footer = props => {
 									verbouwklussen van Nederland.
 								</p>
 								<Container>
+									<hr
+										height='14%'
+										width='100%'
+										color='white'
+									/>
 									<div className='mx-5'>
-										<hr
-											height='14%'
-											width='100%'
-											color='white'
-										/>
 										<Row className='text-center text-light justify-content-center text-muted'>
 											<div className='m-2'>
 												Cookie Policy

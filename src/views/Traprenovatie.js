@@ -15,12 +15,11 @@ import {
 	Input,
 } from 'reactstrap';
 
-import HeroMainSection from '../components/Traprenovatie/heroSection_MainSection';
-import Testimonial from '../components/Traprenovatie/heroSection_testimonial';
-import Footer from '../components/Footer/heroSection_footer';
-import HeroSection from '../components/Traprenovatie/heroSection_horizontalBar';
-import MainNavbar from '../components/Traprenovatie/heroSection_horizontalBar';
-import HeroSectionTopContainer from '../components/Header/heroSection_Header';
+import HeroMainSection from '../components/Traprenovatie/MainSection';
+import Testimonial from '../components/Traprenovatie/testimonial';
+import Footer from '../components/Footer/footer';
+import HorizontalBar from '../components/Traprenovatie/horizontalBar';
+import HeroSectionTopContainer from '../components/Header/Header';
 
 const Traprenovatie = props => {
 	return (
@@ -30,8 +29,8 @@ const Traprenovatie = props => {
 				<HeroSectionTopContainer />
 			</Container>
 			{/* Flex  */}
-			<Container className='bg-site-Mainbar-color' fluid>
-				<MainNavbar />
+			<Container className='bg-site-horizontalBar-color' fluid>
+				<HorizontalBar />
 			</Container>
 			{/* Section Main */}
 			<div className='bg-site-main-color'>
