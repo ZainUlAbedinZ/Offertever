@@ -15,12 +15,12 @@ import {
 	Input,
 } from 'reactstrap';
 
-import HeroMainSection from '../components/Traprenovatie/heroMainSection';
-import Testimonial from '../components/Traprenovatie/testimonial';
-import Footer from '../components/Traprenovatie/footer';
-import HeroSection from '../components/Traprenovatie/heroSectionTopBar';
-import MainNavbar from '../components/Traprenovatie/heroSectionTopBar';
-import HeroSectionTopContainer from '../components/Traprenovatie/heroSectionTopContainer';
+import HeroMainSection from '../components/Traprenovatie/heroSection_MainSection';
+import Testimonial from '../components/Traprenovatie/heroSection_testimonial';
+import Footer from '../components/Footer/heroSection_footer';
+import HeroSection from '../components/Traprenovatie/heroSection_horizontalBar';
+import MainNavbar from '../components/Traprenovatie/heroSection_horizontalBar';
+import HeroSectionTopContainer from '../components/Header/heroSection_Header';
 
 const Traprenovatie = props => {
 	return (
