@@ -41,9 +41,9 @@ const heroSectionTopContainer = props => {
 							height='130px'
 							style={{
 								// right: '0px',
-								right: '31px',
+								right: '63px',
+								// marginTop: '-59px',
 								marginTop: '-59px',
-								// bottom: '67px',
 							}}
 						/>
 						<h4 className='mb-4 fs--32 pl-md-0 fs--35 pl-md-0 text-light text-left mt-3 fw--600'>
@@ -55,16 +55,19 @@ const heroSectionTopContainer = props => {
 						</h4>
 						{/* </div> */}
 						<div className='p-0 fs-5'>
-							<p className=' pl-md-0 pl-md-0  pr-md-5 pr-md-3 text-justify text-light fw-100 shadow-sm'>
-								<span className='w-100 fs--23 fw-400'>
+							<p className='pl-md-0 pl-md-0  pr-md-5 pr-md-3  text-light fw-100 shadow-sm'>
+								<span className='w-100 fs--22 fw-400'>
 									Zo krijg je de beste prijs voor jouw
 									traprenovatie! <br />
 								</span>
-								Is jouw trap ook toe aan een opknapbeaurt? Dan
-								is dit jouw kans.Het Kost je niets en je zit
-								nergens aan vast. Zo kies jij zelf de bestie
-								aanbieder. Moeiteloos en zonder verplichtingen.
-								Laat snel je gegevens achter en pak deze kans
+								<p className='text-justify'>
+									Is jouw trap ook toe aan een opknapbeaurt?
+									Dan is dit jouw kans.Het Kost je niets en je
+									zit nergens aan vast. Zo kies jij zelf de
+									bestie aanbieder. Moeiteloos en zonder
+									verplichtingen. Laat snel je gegevens achter
+									en pak deze kans
+								</p>
 							</p>
 						</div>
 						{/* </div> */}
