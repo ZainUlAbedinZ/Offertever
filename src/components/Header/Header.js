@@ -35,16 +35,16 @@ const heroSectionTopContainer = props => {
 						{/* <div className='position-relative'> */}
 						<img
 							src={heroTextLogo}
-							className='d-none d-md-flex position-absolute end-0'
+							className='d-none d-md-flex position-absolute end-0 promotion-logo'
 							rounded
 							width='140px'
 							height='130px'
-							style={{
-								// right: '0px',
-								right: '63px',
-								// marginTop: '-59px',
-								marginTop: '-59px',
-							}}
+							// style={{
+							// 	// right: '0px',
+							// 	right: '63px',
+							// 	// marginTop: '-59px',
+							// 	marginTop: '-59px',
+							// }}
 						/>
 						<h4 className='mb-4 fs--32 pl-md-0 fs--35 pl-md-0 text-light text-left mt-3 fw--600'>
 							Gratis en Vrijblijvend <br />
