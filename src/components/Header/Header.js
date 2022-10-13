@@ -36,14 +36,13 @@ const heroSectionTopContainer = props => {
 							{/* <div className='position-absolute right-0'> */}
 							<img
 								src={heroTextLogo}
-								className='pl-3 d-none d-md-flex position-absolute end-0'
+								className='d-none d-md-flex position-absolute end-0'
 								rounded
-								width='145px'
-								height='150px'
+								width='135px'
+								height='130px'
 								style={{
 									right: 0,
 									bottom: '67px',
-									left: '355px',
 								}}
 							/>
 							{/* </div> */}
