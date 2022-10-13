@@ -116,7 +116,7 @@ const MainNavbar = props => {
 									height='50px'
 								/>
 							</div>
-							<div className='ml-3 align-self-center'>
+							<div className='ml-3 align-items-end'>
 								<p className='fw--600'>
 									Binnen <br /> 1WERKDAG <br /> geplaatst
 								</p>

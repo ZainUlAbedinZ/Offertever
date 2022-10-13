@@ -173,7 +173,7 @@ const HeroSection = props => {
 							<div className='text-center mx-auto'>
 								<Button className='mx-auto btn btn-lg border rounded-0 border-light bg-site-orange text-light'>
 									GRATIS OFFERTES VERGELIJKN{' '}
-									<span>
+									<span className='pb-2 px-2'>
 										<img src={Arrow} />
 									</span>
 								</Button>
