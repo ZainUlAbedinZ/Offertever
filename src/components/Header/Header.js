@@ -14,6 +14,7 @@ import {
 	Label,
 	Input,
 } from 'reactstrap';
+import Arrow from '../../assets/img/ArrowSign.png';
 
 import heroTextLogo from '../../assets/img/hero_section_Col_6_text_logo.png';
 
@@ -27,43 +28,52 @@ const heroSectionTopContainer = props => {
 			<Container>
 				<Row className='align-items-end justify-content-center'>
 					<Col
-						md='5'
+						md='6'
 						xs='12'
 						className='align-items-end order-2 justify-content-end order-sm-2 order-md-1 order-xs-2 '
 					>
-						<div>
+						<div className='position-relative'>
+							{/* <div className='position-absolute right-0'> */}
 							<img
 								src={heroTextLogo}
-								className='pl-3 d-none d-md-flex pl-md-0  float-right'
+								className='pl-3 d-none d-md-flex position-absolute end-0'
 								rounded
-								width='130px'
+								width='145px'
+								height='150px'
+								style={{
+									right: 0,
+									bottom: '67px',
+									left: '355px',
+								}}
 							/>
-						</div>
-						<div className='p-0 justify-content-center mt-5 fs-5'>
-							<h4 className=' pl-md-0 fs-3 pl-md-0 text-light text-left mt-3 fw--800'>
+							{/* </div> */}
+							<h4 className='mb-4 pl-md-0 fs--35 pl-md-0 text-light text-left mt-3 fw--600'>
 								Gratis en Vrijblijvend <br />
 								<span className='w-100'>
-									offertes aanvragen bij een <br />{' '}
+									offertes aanvragen bij een <br />
 								</span>
 								netwerk van Speicallisten ?
 							</h4>
+						</div>
+						<div className='p-0 justify-content-center fs-5'>
 							<p className=' pl-md-0 pl-md-0 fs-5 pr-md-5 pr-md-3 text-justify text-light fw-100 shadow-sm'>
 								<span className='w-75 font-weight-bold'>
 									Zo krijg je de beste prijs voor jouw
 									traprenovatie!
 								</span>
-								.Is jouw trap ook toe aan een opknapbeaurt? Dan
+								. Is jouw trap ook toe aan een opknapbeaurt? Dan
 								is dit jouw kans.Het Kost je niets en je zit
 								nergens aan vast. Zo kies jij zelf de bestie
 								aanbieder. Moeiteloos en zonder verplichtingen.
 								Laat snel je gegevens achter en pak deze kans
 							</p>
 						</div>
+						{/* </div> */}
 					</Col>
 					<Col
-						md='5'
+						md='6'
 						xs='12'
-						className='align-items-end order-sm-1 order-1 order-md-2 order-xs-1 pl-0 ml-0'
+						className='align-items-ends order-sm-1 order-1 order-md-2 order-xs-1 pl-0 ml-0'
 					>
 						<img
 							src={HeroTextTopLogo}
@@ -71,18 +81,19 @@ const heroSectionTopContainer = props => {
 							width='140px'
 						/>
 						<br />
-						<p className='fs-1 mt-3'>
-							<span className='text-site-orange fs--30 fw--700'>
+
+						<p className='mt-3 ml-md-3'>
+							<span className='text-site-orange fs--30 fw--600'>
 								Bespaar 30%
 							</span>
-							<span className='text-light font-weight-normal fs--20 fw--300'>
+							<span className='text-light font-weight-normal fs--30 fw--300'>
 								in slechts 2 minuten
 							</span>
 							<br />
-							<span className='font-weight-bold fs--30 fw--700 text-site-primary'>
-								Vraag nu voor gratis offertes aan voor jouw
+							<span className='font-weight-bold fs--30 fw--300 text-site-primary'>
+								Vraag nu gratis offertes aan voor jouw
 							</span>
-							<span className='text-site-orange fs--30 fw--700'>
+							<span className='text-site-orange fs--30 fw--500'>
 								{' '}
 								TRAPRENOVATIE{' '}
 							</span>
@@ -92,10 +103,9 @@ const heroSectionTopContainer = props => {
 							//  w-100 w-sm-100 w-md-75 w-lg-75 w-xl-75
 							className='px-3 mt-3 mb-3 bg-site-primary'
 						>
-							{/*  style={{width: '30rem'}} */}
 							<CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85'>
 								<Col md='8' lg='8' sm='8' className='p-0'>
-									<p className='w-100 fs--20 fw--400'>
+									<p className='w-100 fs--20 fw--410'>
 										Naar wie mongen we <br />
 										de Gratis offertes sturen?{' '}
 									</p>
@@ -110,38 +120,36 @@ const heroSectionTopContainer = props => {
 							</CardHeader>
 							<CardBody color='text-light'>
 								<CardText>
-									<Row className='justify-content-center'>
-										{/* pr-md-2 */}
+									{/* className='justify-content-center p-0' */}
+									{/* className='mx-auto' */}
+									<Row>
+										{/* pr-md-2 w-100 p-0 w-25 w-md-25  */}
 										<Col
-											className='p-0  w-100 w-md-25'
-											lg='3'
+											// className='p-0 pr-md-2 w-25 w-md-25'
 											md='3'
-											sm='12'
+											xs='3'
+											className='p-1'
 										>
-											<Label className='text-light fs--16 fw--600'>
+											<Label className='text-light fs--16 fw--400'>
 												Postcode
 											</Label>
 											<Input type='text' />
 										</Col>
-										<Col
-											className='px-0 px-md-2'
-											lg='6'
-											md='6'
-											sm='12'
-										>
-											<Label className='text-light fs--16 fw--600'>
+										{/* px-0  px-2 px-md-2  className='px-md-2'*/}
+										<Col md='5' xs='5' className='p-1'>
+											<Label className='text-light fs--16 fw--400'>
 												Straat
 											</Label>
 											<Input type='text' />
 										</Col>
-										{/* pl-md-2 */}
+										{/* pl-md-2 p-0 pl-2 w-25 w-md-25 */}
 										<Col
-											className='p-0  w-100 w-md-25'
-											lg='3'
-											md='3'
-											sm='12'
+											// className='p-0 pl-md-2 w-25 w-md-25'
+											md='4'
+											xs='4'
+											className='p-1'
 										>
-											<Label className='text-light fs--16 fw--600'>
+											<Label className='text-light fs--16 fw--400'>
 												Huisnument
 											</Label>
 											<Input type='text' />
@@ -149,28 +157,41 @@ const heroSectionTopContainer = props => {
 									</Row>
 									{/* nEW rOW  */}
 									<Row>
-										<Col className='p-0'>
-											<Label className='text-light pt-2 fs--16 fw--600'>
+										{/* className='p-0' */}
+										<Col md='12' xs='12' className='p-1'>
+											<Label className='text-light fs--16 fw--400'>
 												WoonPlates
 											</Label>
 											<Input type='text' />
 										</Col>
 									</Row>
 									<Row>
-										{/* <Col className='p-0'> */}
-										<small className='text-light font-weight-lighter mt-3 d-block fw--100'>
+										{/* <Col className='ml-2'> */}
+										<small className='ml-3 text-light font-weight-lighter d-block fw--200'>
 											Door vrijblijvend offertes aan te
-											vragen ga je akhoord met onze
-											<a className='text-primary pl-1'>
+											vragen ga je akhoord met onze {''}
+											<a className='text-site-horizontalBar-color'>
 												algemene voorwaarden
 											</a>
 										</small>
+										{/* <p>
+											<span className='fs-1 text-light'>
+												Door vrijblijvend offertes aan
+												te vragen ga je akhoord met onze
+												<a className='text-primary'>
+													algemene voorwaarden{' '}
+												</a>
+											</span>
+										</p> */}
 										{/* </Col> */}
 									</Row>
 								</CardText>
 								<div className='text-center'>
-									<Button className='bg-site-orange text-light fs--16 fw--400'>
-										GRATIS OFFERTES VERGELIJKN -{'>'}
+									<Button className='btn btn-lg bg-site-orange text-light fs--16 fw--400 border-light rounded-0'>
+										GRATIS OFFERTES VERGELIJKN{' '}
+										<span>
+											<img src={Arrow} />
+										</span>
 									</Button>
 								</div>
 							</CardBody>

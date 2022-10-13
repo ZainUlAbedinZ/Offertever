@@ -58,7 +58,9 @@ $weights: 100 200 300 400 500 600 700 800;
 }
 
 small {
-	font-size: 9px;
+	font-size: 10px;
+	// line-height: 1px;
+	letter-spacing: 1px;
 }
 
 .hero_section {

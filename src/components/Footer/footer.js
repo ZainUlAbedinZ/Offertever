@@ -23,7 +23,7 @@ const Footer = props => {
 				<Container>
 					{/* justify-content-end */}
 					<Row className='justify-content-center'>
-						<Col md='9' sm='12'>
+						<Col md='12' sm='12'>
 							{/* <div className='mx-md-5 px-md-5'> */}
 							<div className='text-center'>
 								<img
@@ -38,11 +38,11 @@ const Footer = props => {
 								<Container>
 									<hr
 										height='14%'
-										width='100%'
+										width='80%'
 										color='white'
 									/>
 									<div className='mx-5'>
-										<Row className='text-center text-light justify-content-center text-muted'>
+										<Row className='text-center text-muted justify-content-center'>
 											<div className='m-2'>
 												Cookie Policy
 											</div>

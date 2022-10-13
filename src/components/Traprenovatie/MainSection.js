@@ -16,6 +16,7 @@ import hpl from '../../assets/img/hpl.png';
 import Hout from '../../assets/img/Hout.png';
 import PVC from '../../assets/img/PVC.png';
 import Laminaat from '../../assets/img/Laminaat.png';
+import Arrow from '../../assets/img/ArrowSign.png';
 
 const HeroSection = props => {
 	return (
@@ -25,12 +26,19 @@ const HeroSection = props => {
 				<div className='px-3'>
 					<Row className='justify-content-center'>
 						{/* Col ='9' */}
-						<Col md='11' sm='12'>
+						<Col md='12' sm='12'>
 							<h4 className='text-dark text-center fw--700 pt-4'>
 								TRAPRENOVATIE OFFERTES VERGELIJKN
 							</h4>
-							<hr height='50px' width='90px' color='#FF4500' />
-							<h5 className='text-site-primary text-center text-bold fs-smaller fw--700 fs-2'>
+							<hr
+								style={{
+									height: '4px',
+									width: '80px',
+									background: '#FF4500',
+								}}
+								className='border fs-larger border-site-orange'
+							/>
+							<h5 className='text-site-primary text-center text-bold fs-smaller fw--600 fs-2'>
 								Populairste materialen traprenovatie
 							</h5>
 							<p className='text-site-primary text-center fw--500'>
@@ -53,7 +61,7 @@ const HeroSection = props => {
 				<div className='px-3'>
 					<Row className='justify-content-center'>
 						{/* COl MD='9'; */}
-						<Col md='11' sm='12'>
+						<Col md='12' sm='12'>
 							{/* className='p-0' */}
 							<Row>
 								<Col
@@ -67,7 +75,7 @@ const HeroSection = props => {
 										<img src={Laminaat} />
 									</div>
 									<div>
-										<h6 className='text-dark ml-2 ml-md-4'>
+										<h6 className='text-dark ml-2 ml-md-4 fw--600'>
 											LAMINAAT
 										</h6>
 										<p className='text-dark ml-2 ml-md-4'>
@@ -92,7 +100,7 @@ const HeroSection = props => {
 										<img src={hpl} />
 									</div>
 									<div>
-										<h6 className='text-dark ml-2 ml-md-4'>
+										<h6 className='text-dark ml-2 ml-md-4 fw--600'>
 											HPL/CPL
 										</h6>
 										<p className='text-dark ml-2 ml-md-4'>
@@ -122,7 +130,7 @@ const HeroSection = props => {
 										<img src={Hout} />
 									</div>
 									<div>
-										<h6 className='text-dark ml-2 ml-md-4'>
+										<h6 className='text-dark ml-2 ml-md-4 fw--600'>
 											HOUT
 										</h6>
 										<p className='text-dark ml-2 ml-md-4'>
@@ -148,7 +156,7 @@ const HeroSection = props => {
 										<img src={PVC} />
 									</div>
 									<div>
-										<h6 className='text-dark  ml-2 ml-md-4'>
+										<h6 className='text-dark  ml-2 ml-md-4 fw--600'>
 											PVC
 										</h6>
 										<p className='text-dark  ml-2 ml-md-4'>
@@ -163,8 +171,11 @@ const HeroSection = props => {
 							</Row>
 							<br />
 							<div className='text-center mx-auto'>
-								<Button className='mx-auto bg-site-orange text-light'>
-									GRATIS OFFERTES VERGELIJKN -{'>'}
+								<Button className='mx-auto btn btn-lg border rounded-0 border-light bg-site-orange text-light'>
+									GRATIS OFFERTES VERGELIJKN{' '}
+									<span>
+										<img src={Arrow} />
+									</span>
 								</Button>
 							</div>
 							{/* </div> */}

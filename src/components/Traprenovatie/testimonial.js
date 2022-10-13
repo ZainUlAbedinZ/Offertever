@@ -19,13 +19,15 @@ const Testimonial = props => {
 	return (
 		<>
 			{/* Testimonial */}
-			<Container className=''>
+			<Container>
 				{/* justify-content-end */}
 				<Row className='justify-content-center'>
-					<Col md='9' sm='12'>
+					<Col md='12' sm='12'>
 						<h5 className='text-center py-3'>
 							Meer dan{' '}
-							<strong className='text-primary'>109.00</strong>{' '}
+							<strong className='text-site-horizontalBar-color'>
+								109.000
+							</strong>{' '}
 							tevredence klanten
 						</h5>
 						<Row>
@@ -40,7 +42,7 @@ const Testimonial = props => {
 									Opp een fantastic en correcte snelle manier
 									geholpen!!
 								</h5>
-								<p className='text-muted py-3'>
+								<p className='text-muted py-3 text-center'>
 									Had eerlijk gezegd neit verwacht dat minjn
 									gevraagde opdracht zo snel tot een oplossing
 									zou komen. Zeer tevrenden over de dienst van
@@ -57,7 +59,7 @@ const Testimonial = props => {
 								<h5 className='text-center'>
 									Simpel, snap en goed
 								</h5>
-								<p className='text-muted py-3'>
+								<p className='text-muted text-center py-3 '>
 									Eenvoudige onze wensen doorgegen. IK ben
 									goed op de hoogte gehouden m.b.t de status
 									van mijn aanvraag. Snel benaderd door

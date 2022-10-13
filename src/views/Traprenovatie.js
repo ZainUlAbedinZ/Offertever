@@ -16,9 +16,9 @@ import {
 } from 'reactstrap';
 
 import HeroMainSection from '../components/Traprenovatie/MainSection';
-import Testimonial from '../components/Traprenovatie/testimonial';
-import Footer from '../components/Footer/footer';
-import HorizontalBar from '../components/Traprenovatie/horizontalBar';
+import Testimonial from '../components/Traprenovatie/Testimonial';
+import Footer from '../components/Footer/Footer';
+import HorizontalBar from '../components/Traprenovatie/HorizontalBar';
 import HeroSectionTopContainer from '../components/Header/Header';
 
 const Traprenovatie = props => {
