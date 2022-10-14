@@ -21,6 +21,8 @@ $theme-colors: (
 	'site-secondary': #f1f0ec,
 	// 'site-light-heading': #f1f0ec,
 	'site-main-color': #d6d5d2,
+
+	// site-main-color
 	'site-horizontalBar-color': #48cae4,
 );
 
@@ -74,8 +76,11 @@ small {
 	// background-clip: padding-box;
 }
 .promotion-logo {
-	right: 63px;
-	margin-top: -59px;
+	width: 155px;
+	height: 145px;
+	border-radius: 50%;
+	right: 60px;
+	margin-top: -65px;
 	@media (max-width: 948.8px) {
 		right: -2px;
 		margin-top: -39px;

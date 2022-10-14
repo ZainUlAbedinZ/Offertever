@@ -18,7 +18,7 @@ import React from 'react';
 import { COMMENT_KEYS } from '@babel/types';
 import Checkbox from '../../assets/img/CheckBox.png';
 
-const MainNavbar = props => {
+const HorizontalBar = props => {
 	return (
 		<>
 			<Container>
@@ -40,14 +40,20 @@ const MainNavbar = props => {
 									src={Checkbox}
 									color='light'
 									className='text-light'
-									height='50px'
-									width='50px'
+									height='45px'
+									width='45px'
 								/>
 							</div>
-							<div className='ml-3'>
-								<p className='fw--600 '>
-									GRATIS en <br /> VERGELIJKN <br />
-									vergelijken{' '}
+							<div className='ml-3 align-items-end'>
+								<p className='fw--600 fs--14 align-self-end mb-0'>
+									<span className='fw--700'>GRATIS en </span>{' '}
+									<br />
+									<span className='fw--700'>
+										{' '}
+										VERGELIJKN{' '}
+									</span>{' '}
+									<br />
+									<span className='fw--700'>vergelijken</span>
 								</p>
 							</div>
 						</Col>
@@ -61,12 +67,12 @@ const MainNavbar = props => {
 									src={Checkbox}
 									color='light'
 									className='text-light'
-									height='50px'
-									width='50px'
+									height='45px'
+									width='45px'
 								/>
 							</div>
-							<div className='ml-3'>
-								<p className='fw--600'>
+							<div className='ml-3 align-items-end'>
+								<p className='fw--700 fs--14 align-self-end mb-0'>
 									BESPAAR 30% <br />
 									in{' '}
 									<span className='fs-6'>
@@ -85,18 +91,18 @@ const MainNavbar = props => {
 									src={Checkbox}
 									color='light'
 									className='text-light'
-									width='50px'
-									height='50px'
+									width='45px'
+									height='45px'
 								/>
 							</div>
-							<div className='ml-3'>
-								<p className='fw--600'>
+							<div className='ml-3 align-items-end'>
+								<p className='fw--700 fs--14 align-self-end mb-0'>
 									{' '}
-									<span className='fw--600'>
+									<span className='fw--700 fs--14'>
 										TRAPRENOVATIE{' '}
 									</span>{' '}
 									<br />
-									<span className='fw--600'>
+									<span className='fw--700 fs--14'>
 										al vanaf $ 2.500{' '}
 									</span>{' '}
 								</p>
@@ -112,13 +118,20 @@ const MainNavbar = props => {
 									src={Checkbox}
 									color='light'
 									className='text-light'
-									width='50px'
-									height='50px'
+									width='45px'
+									height='45px'
 								/>
 							</div>
 							<div className='ml-3 align-items-end'>
-								<p className='fw--600'>
-									Binnen <br /> 1WERKDAG <br /> geplaatst
+								<p className='fw--700 fs--14 align-self-end mb-0'>
+									<span className='fw--700'>Binnen </span>{' '}
+									<br />
+									<span className='fw--700'>
+										{' '}
+										1WERKDAG
+									</span>{' '}
+									<br />
+									<span className='fw--700'>geplaatst</span>
 								</p>
 							</div>
 						</Col>
@@ -129,4 +142,4 @@ const MainNavbar = props => {
 	);
 };
 
-export default MainNavbar;
+export default HorizontalBar;

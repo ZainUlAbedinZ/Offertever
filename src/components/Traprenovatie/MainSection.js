@@ -171,10 +171,24 @@ const HeroSection = props => {
 							</Row>
 							<br />
 							<div className='text-center mx-auto'>
-								<Button className='mx-auto btn btn-lg border rounded-0 border-light bg-site-orange text-light'>
+								{/* <Button className=' btn btn-lg border rounded-0 border-light bg-site-orange text-light'>
+									<span className='fs--20'>
+										GRATIS OFFERTES VERGELIJKN{' '}
+									</span>
+									<span className='pl-1'>
+										<img
+											src={Arrow}
+											className='mt-0 mb-2'
+										/>
+									</span>
+								</Button> */}
+								<Button className='btn btn-lg bg-site-orange text-light fs--18 fw--500 border rounded-0 border-light'>
 									GRATIS OFFERTES VERGELIJKN{' '}
-									<span className='pb-2 px-2'>
-										<img src={Arrow} />
+									<span>
+										<img
+											src={Arrow}
+											className='pl-2 mt-0'
+										/>
 									</span>
 								</Button>
 							</div>

@@ -31,7 +31,7 @@ const Testimonial = props => {
 							tevredence klanten
 						</h5>
 						<Row>
-							<Col lg='6' md='6' sm='12'>
+							<Col md='6' sm='12'>
 								<div className='text-center h-3'>
 									<img
 										src={RatingStar1}
@@ -42,14 +42,14 @@ const Testimonial = props => {
 									Opp een fantastic en correcte snelle manier
 									geholpen!!
 								</h5>
-								<p className='text-muted py-3 text-center'>
+								<p className='text-muted fs--8 py-3 text-center'>
 									Had eerlijk gezegd neit verwacht dat minjn
 									gevraagde opdracht zo snel tot een oplossing
 									zou komen. Zeer tevrenden over de dienst van
 									Offertevergelijker.nl
 								</p>
 							</Col>
-							<Col lg='6' md='6' sm='12'>
+							<Col md='6' sm='12'>
 								<div className='text-center h-3'>
 									<img
 										src={RatingStar2}

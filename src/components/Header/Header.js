@@ -37,8 +37,7 @@ const heroSectionTopContainer = props => {
 							src={heroTextLogo}
 							className='d-none d-md-flex position-absolute end-0 promotion-logo'
 							rounded
-							width='140px'
-							height='130px'
+
 							// style={{
 							// 	// right: '0px',
 							// 	right: '63px',
@@ -79,7 +78,7 @@ const heroSectionTopContainer = props => {
 					>
 						<img
 							src={HeroTextTopLogo}
-							className='mt-3 text-center'
+							className='mt-3 ml-md-3 text-center'
 							width='140px'
 						/>
 						<br />
@@ -88,7 +87,7 @@ const heroSectionTopContainer = props => {
 							<span className='text-site-orange fs--30 fw--600'>
 								Bespaar 30%
 							</span>
-							<span className='text-light font-weight-normal fs--30 fw--300'>
+							<span className='text-light font-weight-normal fs--30 fw--600'>
 								in slechts 2 minuten
 							</span>
 							<br />

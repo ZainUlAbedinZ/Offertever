@@ -36,11 +36,7 @@ const Footer = props => {
 									verbouwklussen van Nederland.
 								</p>
 								<Container>
-									<hr
-										height='14%'
-										width='80%'
-										color='white'
-									/>
+									<hr height='14%' width='80%' color='#777' />
 									<div className='mx-5'>
 										<Row className='text-center text-muted justify-content-center'>
 											<div className='m-2'>
