@@ -26,16 +26,26 @@ const heroSectionTopContainer = props => {
 	return (
 		<>
 			<Container>
+				<Row>
+					<Col md='6' className='d-none d-md-flex'></Col>
+					<Col md='6'>
+						<img
+							src={HeroTextTopLogo}
+							className='mt-3 text-center'
+							width='140px'
+						/>
+					</Col>
+				</Row>
 				<Row className='align-items-end justify-content-center'>
 					<Col
 						md='6'
 						xs='12'
-						className='align-items-end order-2 position-relative justify-content-end order-sm-2 order-md-1 order-xs-2 '
+						className='align-items-end  position-relative justify-content-end'
 					>
 						{/* <div className='position-relative'> */}
 						<img
 							src={heroTextLogo}
-							className='d-none d-md-flex position-absolute end-0 promotion-logo'
+							className=' d-md-flex pl-lg-3 position-absolute end-0 promotion-logo'
 							rounded
 
 							// style={{
@@ -71,16 +81,12 @@ const heroSectionTopContainer = props => {
 						</div>
 						{/* </div> */}
 					</Col>
-					<Col
-						md='6'
-						xs='12'
-						className='align-items-ends order-sm-1 order-1 order-md-2 order-xs-1 pl-0 ml-0'
-					>
-						<img
+					<Col md='6' xs='12' className='align-items-ends  pl-0 ml-0'>
+						{/* <img
 							src={HeroTextTopLogo}
 							className='mt-3 ml-md-3 text-center'
 							width='140px'
-						/>
+						/> */}
 						<br />
 
 						<p className='mt-3 ml-md-3'>
