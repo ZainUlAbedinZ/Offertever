@@ -63,7 +63,7 @@ const heroSectionTopContainer = props => {
 							netwerk van Speicallisten ?
 						</h4>
 						{/* </div> */}
-						<div className='p-0 fs-5'>
+						<div className='mt-3 p-0 fs-5'>
 							<p className='pl-md-0 pl-md-0  pr-md-5 pr-md-3  text-light fw-100 shadow-sm'>
 								<span className='w-100 fs--22 fw-400'>
 									Zo krijg je de beste prijs voor jouw
