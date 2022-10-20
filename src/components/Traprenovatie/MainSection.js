@@ -17,6 +17,7 @@ import Hout from '../../assets/img/Hout.png';
 import PVC from '../../assets/img/PVC.png';
 import Laminaat from '../../assets/img/Laminaat.png';
 import Arrow from '../../assets/img/ArrowSign.png';
+import { Link } from 'react-router-dom';
 
 const HeroSection = props => {
 	return (
@@ -41,7 +42,7 @@ const HeroSection = props => {
 							<h5 className='text-site-primary text-center text-bold fs-smaller fw--600 fs-2'>
 								Populairste materialen traprenovatie
 							</h5>
-							<p className='text-site-primary text-center fw--500'>
+							<p className='text-site-primary  text-center fw--600'>
 								Voorhen werd er vaak gekozen om de trap te
 								bekleden met tapijt of hem te schildrence. Deze
 								opties tonens echtar snel gebruiksspen, waardon
@@ -170,27 +171,18 @@ const HeroSection = props => {
 								</Col>
 							</Row>
 							<br />
-							<div className='text-center mx-auto'>
-								{/* <Button className=' btn btn-lg border rounded-0 border-light bg-site-orange text-light'>
-									<span className='fs--20'>
+							<div className='text-center'>
+								<Link to='/page2'>
+									<Button className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'>
 										GRATIS OFFERTES VERGELIJKN{' '}
-									</span>
-									<span className='pl-1'>
-										<img
-											src={Arrow}
-											className='mt-0 mb-2'
-										/>
-									</span>
-								</Button> */}
-								<Button className='btn btn-lg bg-site-orange text-light fs--18 fw--500 border rounded-0 border-light'>
-									GRATIS OFFERTES VERGELIJKN{' '}
-									<span>
-										<img
-											src={Arrow}
-											className='pl-2 mt-0'
-										/>
-									</span>
-								</Button>
+										<span>
+											<i
+												class='fa fa-arrow-right'
+												aria-hidden='true'
+											></i>
+										</span>
+									</Button>
+								</Link>
 							</div>
 							{/* </div> */}
 						</Col>

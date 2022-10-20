@@ -37,23 +37,17 @@ const Footer = props => {
 								</p>
 								<Container>
 									<hr height='14%' width='80%' color='#777' />
-									<div className='mx-5'>
-										<Row className='text-center text-muted justify-content-center'>
-											<div className='m-2'>
-												Cookie Policy
-											</div>
-											<span className='m-2'>|</span>
-											<div className='m-2'>
-												Disclaimer
-											</div>
-											<span className='m-2'>|</span>
-											<div className='m-2'>
-												Privacy Statements
-											</div>
-											<span className='m-2'>|</span>
-											<div className='m-2'>Contact</div>
-										</Row>
-									</div>
+									<Row className='text-center text-muted justify-content-center'>
+										<div className='m-2'>Cookie Policy</div>
+										<span className='m-2'>|</span>
+										<div className='m-2'>Disclaimer</div>
+										<span className='m-2'>|</span>
+										<div className='m-2'>
+											Privacy Statements
+										</div>
+										<span className='m-2'>|</span>
+										<div className='m-2'>Contact</div>
+									</Row>
 								</Container>
 							</div>
 						</Col>
