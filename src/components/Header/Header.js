@@ -138,6 +138,16 @@ const Header = props => {
 		}
 	};
 
+	const TraprenovatieData = () => {
+		const update = {
+			postCode,
+			straat,
+			huisnument,
+			WoonPlates,
+		};
+		console.log(update, '========>update');
+	};
+
 	return (
 		<>
 			<Container className='px-md-5'>
@@ -246,20 +256,11 @@ const Header = props => {
 									/>
 								</Col>
 							</CardHeader>
-							<Form>
+							<Form onSubmit={TraprenovatieData}>
 								<CardBody color='text-light'>
 									<CardText>
-										{/* className='justify-content-center p-0' */}
-										{/* className='mx-auto' */}
-
 										<Row>
-											{/* pr-md-2 w-100 p-0 w-25 w-md-25  */}
-											<Col
-												// className='p-0 pr-md-2 w-25 w-md-25'
-												md='3'
-												xs='3'
-												className='p-1'
-											>
+											<Col md='3' xs='3' className='p-1'>
 												<Label className='text-light fs--16 fw--400'>
 													Postcode
 												</Label>
@@ -281,7 +282,6 @@ const Header = props => {
 													</small>
 												</FormFeedback>
 											</Col>
-											{/* px-0  px-2 px-md-2  className='px-md-2'*/}
 											<Col md='5' xs='5' className='p-1'>
 												<Label className='text-light fs--16 fw--400'>
 													Straat
@@ -304,13 +304,7 @@ const Header = props => {
 													</small>
 												</FormFeedback>
 											</Col>
-											{/* pl-md-2 p-0 pl-2 w-25 w-md-25 */}
-											<Col
-												// className='p-0 pl-md-2 w-25 w-md-25'
-												md='4'
-												xs='4'
-												className='p-1'
-											>
+											<Col md='4' xs='4' className='p-1'>
 												<Label className='text-light fs--16 fw--400'>
 													Huisnument
 												</Label>
@@ -335,7 +329,6 @@ const Header = props => {
 										</Row>
 										{/* nEW rOW  */}
 										<Row>
-											{/* className='p-0' */}
 											<Col
 												md='12'
 												xs='12'
@@ -364,7 +357,6 @@ const Header = props => {
 											</Col>
 										</Row>
 										<Row>
-											{/* <Col className='ml-2'> */}
 											<small className='py-2 ml-3 text-light fw--200'>
 												Door vrijblijvend offertes aan
 												te vragen ga je akhoord met onze
@@ -380,18 +372,21 @@ const Header = props => {
 									checkStraatRegex(straat) == false &&
 									checkHuisnumentRegex(huisnument) == false &&
 									checkWoonPlatesRegex(WoonPlates) == false &&
-									postCode.length != '' &&
-									straat.length !== '' &&
-									huisnument.length !== '' &&
-									WoonPlates.length !== '' ? (
+									postCode != '' &&
+									straat !== '' &&
+									huisnument !== '' &&
+									WoonPlates !== '' ? (
 										<>
 											<Link
 												to='/page2'
 												className='text-decoration-none'
+												// props={
+												// 	TraprenovatieData:
+												// 		TraprenovatieData,
+												// }
 											>
 												<Button
 													type='submit'
-													// onClick={validate}
 													className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'
 												>
 													GRATIS OFFERTES VERGELIJKN{' '}

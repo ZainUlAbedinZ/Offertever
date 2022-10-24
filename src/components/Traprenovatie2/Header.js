@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
 import {
@@ -61,9 +61,15 @@ const Header = props => {
 	const [email, setEmail] = useState();
 	const [telefoonnummer, setTelefoornnummer] = useState();
 
+	// useLocation
+	// const location = useLocation();
+	// const { TraprenovatieData } = location.props;
+
+	// console.log(TraprenovatieData, 'TraprenovatieData');
+
 	const NextCard = () => {
 		setActive(active + 1);
-		// console.log(active, 'active');
+		
 	};
 
 	// FormButtonHander
@@ -167,7 +173,7 @@ const Header = props => {
 	};
 
 	const checkAchterNaamRegex = achternaam => {
-		let validName = /^([a-zA-Z]{4})$/;
+		let validName = /^([a-zA-Z]{4})/;
 		if (achternaam != '') {
 			if (validName.test(achternaam)) {
 				return false;
@@ -193,7 +199,7 @@ const Header = props => {
 	};
 
 	const checkTelefoornNummerRegex = telefoonnummer => {
-		let validName = /^([0-9]{8})$/;
+		let validName = /^([0-9])+$/;
 		if (telefoonnummer != '') {
 			if (validName.test(telefoonnummer)) {
 				return false;
@@ -204,12 +210,6 @@ const Header = props => {
 			return false;
 		}
 	};
-	// console.log(checkTelefoornNummerRegex(telefoonnummer), 'telefoonnummer');
-
-	// console.log(checkEmailRegex(email), 'email');
-	// console.log(checkAchterNaamRegex(achternaam), 'achternaam');
-	// // console.log(email, 'email');
-	// console.log(checkVoorNaamRegex(voornaam), 'voornum');
 
 	return (
 		<>
@@ -363,7 +363,14 @@ const Header = props => {
 											</>
 										) : (
 											<>
-												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+												<Button
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+													onClick={() => {
+														alert(
+															'Please select atleast one'
+														);
+													}}
+												>
 													VERDER{' '}
 													<span>
 														<i
@@ -564,7 +571,14 @@ const Header = props => {
 											</>
 										) : (
 											<>
-												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+												<Button
+													onClick={() => {
+														alert(
+															'Please select atleast one'
+														);
+													}}
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+												>
 													VERDER{' '}
 													<span>
 														<i
@@ -729,7 +743,14 @@ const Header = props => {
 											</>
 										) : (
 											<>
-												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+												<Button
+													onClick={() =>
+														alert(
+															'Please Select atleast one'
+														)
+													}
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+												>
 													VERDER{' '}
 													<span>
 														<i
@@ -899,7 +920,14 @@ const Header = props => {
 											</>
 										) : (
 											<>
-												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+												<Button
+													onClick={() =>
+														alert(
+															'Please Select atleast one'
+														)
+													}
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+												>
 													VERDER{' '}
 													<span>
 														<i
@@ -1001,7 +1029,14 @@ const Header = props => {
 											</>
 										) : (
 											<>
-												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+												<Button
+													onClick={() =>
+														alert(
+															'Please Select atleast one'
+														)
+													}
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+												>
 													VERDER{' '}
 													<span>
 														<i
@@ -1037,6 +1072,9 @@ const Header = props => {
 													? 'w-100 my-3 bg-primary rounded text-center'
 													: 'w-100 my-3 bg-light rounded text-center'
 											}
+											onClick={() =>
+												seventhCardClickHandler(1)
+											}
 										>
 											<div
 												className={
@@ -1058,6 +1096,9 @@ const Header = props => {
 												activeCard7.includes(2)
 													? 'w-100 my-3 bg-primary rounded'
 													: 'w-100 my-3 bg-light rounded'
+											}
+											onClick={() =>
+												seventhCardClickHandler(2)
 											}
 										>
 											<div
@@ -1119,7 +1160,14 @@ const Header = props => {
 											</>
 										) : (
 											<>
-												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+												<Button
+													onClick={() =>
+														alert(
+															'Please Select atleast one'
+														)
+													}
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+												>
 													VERDER{' '}
 													<span>
 														<i
@@ -1311,9 +1359,14 @@ const Header = props => {
 										) : (
 											<>
 												<Button
+													onClick={() =>
+														alert(
+															'Please Fill Form...'
+														)
+													}
 													type='btn'
 													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
-												disabled>
+												>
 													VERDER{' '}
 													<span>
 														<i
