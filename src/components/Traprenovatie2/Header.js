@@ -150,13 +150,13 @@ const Header = props => {
 		setActiveCard7(temp);
 	};
 
-	// console.log(activeCard7);
+	console.log(activeCard7);
 
 	// Check Regex
-	const checkVoorNaamRegex = val => {
+	const checkVoorNaamRegex = voornaam => {
 		let validName = /^([a-zA-Z]{4})/;
-		if (val != '') {
-			if (validName.test(val)) {
+		if (voornaam != '') {
+			if (validName.test(voornaam)) {
 				return false;
 			} else {
 				return true;
@@ -166,10 +166,10 @@ const Header = props => {
 		}
 	};
 
-	const checkAchterNaamRegex = val => {
+	const checkAchterNaamRegex = achternaam => {
 		let validName = /^([a-zA-Z]{4})$/;
-		if (val != '') {
-			if (validName.test(val)) {
+		if (achternaam != '') {
+			if (validName.test(achternaam)) {
 				return false;
 			} else {
 				return true;
@@ -179,10 +179,10 @@ const Header = props => {
 		}
 	};
 
-	const checkEmailRegex = val => {
+	const checkEmailRegex = email => {
 		let validName = /^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$/;
-		if (val != '') {
-			if (validName.test(val)) {
+		if (email != '') {
+			if (validName.test(email)) {
 				return false;
 			} else {
 				return true;
@@ -192,10 +192,10 @@ const Header = props => {
 		}
 	};
 
-	const checkTelefoornNummerRegex = val => {
+	const checkTelefoornNummerRegex = telefoonnummer => {
 		let validName = /^([0-9]{8})$/;
-		if (val != '') {
-			if (validName.test(val)) {
+		if (telefoonnummer != '') {
+			if (validName.test(telefoonnummer)) {
 				return false;
 			} else {
 				return true;
@@ -204,6 +204,12 @@ const Header = props => {
 			return false;
 		}
 	};
+	// console.log(checkTelefoornNummerRegex(telefoonnummer), 'telefoonnummer');
+
+	// console.log(checkEmailRegex(email), 'email');
+	// console.log(checkAchterNaamRegex(achternaam), 'achternaam');
+	// // console.log(email, 'email');
+	// console.log(checkVoorNaamRegex(voornaam), 'voornum');
 
 	return (
 		<>
@@ -1278,42 +1284,47 @@ const Header = props => {
 												</Row>
 											</CardText>
 										</CardBody>
-										<Row className='px-3 pt-5 mx-3'>
-											{checkVoorNaamRegex == false &&
-											checkAchterNaamRegex == false &&
-											checkEmailRegex == false &&
-											checkTelefoornNummerRegex ==
-												false &&
-											activeCards.length > 0 ? (
-												<>
-													<Button
-														className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
-														type='submit'
-														// onClick={NextCard}
-													>
-														VERDER{' '}
-														<span>
-															<i
-																className='fa fa-arrow-right'
-																aria-hidden='true'
-															></i>
-														</span>
-													</Button>
-												</>
-											) : (
-												<>
-													<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
-														VERDER{' '}
-														<span>
-															<i
-																className='fa fa-arrow-right'
-																aria-hidden='true'
-															></i>
-														</span>
-													</Button>
-												</>
-											)}
-										</Row>
+										{/* <Row className='px-3 pt-5 mx-3'> */}
+										{checkVoorNaamRegex(voornaam) ===
+											false &&
+										checkAchterNaamRegex(achternaam) ===
+											false &&
+										checkEmailRegex(email) === false &&
+										checkTelefoornNummerRegex(
+											telefoonnummer
+										) === false &&
+										email != '' ? (
+											<>
+												<Button
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+													type='submit'
+												>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										) : (
+											<>
+												<Button
+													type='btn'
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+												disabled>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										)}
+										{/* </Row> */}
 									</Form>
 									<CardFooter className='text-light text-center'>
 										Meer den <strong>109.000</strong>{' '}
@@ -1321,7 +1332,7 @@ const Header = props => {
 									</CardFooter>
 								</Card>
 							</>
-						) : (
+						) : active === 8 ? (
 							<>
 								<Card
 									style={{ height: '450px' }}
@@ -1364,20 +1375,6 @@ const Header = props => {
 												buurt toe.
 											</p>
 										</CardText>
-										{/* <Row className='px-3 pt-5 mx-3 '>
-											<Button
-												className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
-												onClick={NextCard}
-											>
-												VERDER{' '}
-												<span>
-													<i
-														class='fa fa-arrow-right'
-														aria-hidden='true'
-													></i>
-												</span>
-											</Button>
-										</Row> */}
 									</CardBody>
 									<CardFooter className='text-light text-center'>
 										Meer den <strong>109.000</strong>{' '}
@@ -1385,6 +1382,8 @@ const Header = props => {
 									</CardFooter>
 								</Card>
 							</>
+						) : (
+							<Link to='/'></Link>
 						)}
 					</Col>
 				</Row>

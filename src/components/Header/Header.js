@@ -228,8 +228,8 @@ const Header = props => {
 						</div>
 
 						<Card
-							//  w-100 w-sm-100 w-md-75 w-lg-75 w-xl-75
-							className='px-3 mx-3 mt-3 mb-3 bg-site-primary'
+							style={{ height: '450px' }}
+							className='px-3 mx-3 mt-3 mb-3 bg-site-primary card'
 						>
 							<CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85'>
 								<Col md='8' lg='8' sm='9' className='p-0'>
@@ -374,38 +374,23 @@ const Header = props => {
 											</small>
 										</Row>
 									</CardText>
-									<div className='text-center'>
-										{checkPostCodeRegex(postCode) ==
-											false &&
-										checkStraatRegex(straat) == false &&
-										checkHuisnumentRegex(huisnument) ==
-											false &&
-										checkWoonPlatesRegex(WoonPlates) ==
-											false ? (
-											<>
-												<Link
-													to='/page2'
-													className='text-decoration-none'
-												>
-													<Button
-														type='submit'
-														// onClick={validate}
-														className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'
-													>
-														GRATIS OFFERTES
-														VERGELIJKN{' '}
-														<span>
-															<i
-																class='fa fa-arrow-right'
-																aria-hidden='true'
-															></i>
-														</span>
-													</Button>
-												</Link>
-											</>
-										) : (
-											<>
+								</CardBody>
+								<div className='text-center'>
+									{checkPostCodeRegex(postCode) == false &&
+									checkStraatRegex(straat) == false &&
+									checkHuisnumentRegex(huisnument) == false &&
+									checkWoonPlatesRegex(WoonPlates) == false &&
+									postCode.length != '' &&
+									straat.length !== '' &&
+									huisnument.length !== '' &&
+									WoonPlates.length !== '' ? (
+										<>
+											<Link
+												to='/page2'
+												className='text-decoration-none'
+											>
 												<Button
+													type='submit'
 													// onClick={validate}
 													className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'
 												>
@@ -417,10 +402,26 @@ const Header = props => {
 														></i>
 													</span>
 												</Button>
-											</>
-										)}
-									</div>
-								</CardBody>
+											</Link>
+										</>
+									) : (
+										<>
+											<Button
+												// onClick={validate}
+												className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'
+												disabled
+											>
+												GRATIS OFFERTES VERGELIJKN{' '}
+												<span>
+													<i
+														class='fa fa-arrow-right'
+														aria-hidden='true'
+													></i>
+												</span>
+											</Button>
+										</>
+									)}
+								</div>
 							</Form>
 							<CardFooter className='text-light text-center'>
 								Meer den <strong>109.000</strong> mension gingen
