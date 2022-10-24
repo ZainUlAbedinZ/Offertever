@@ -409,7 +409,6 @@ const Header = props => {
 											<Button
 												// onClick={validate}
 												className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'
-												disabled
 											>
 												GRATIS OFFERTES VERGELIJKN{' '}
 												<span>
