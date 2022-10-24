@@ -124,3 +124,9 @@ small {
 		margin-top: -71px;
 	}
 }
+
+.card {
+	@media (max-width: 587.8px) {
+		height: auto !important;
+	}
+}

@@ -29,67 +29,67 @@ const FormCard5 = props => {
 					</p>
 				</CardHeader>
 				<CardBody color='text-light'>
-					<Row className='w-100'>
-						<Col sm='6' md='6'>
-							<div className='bg-light py-2 d-flex rounded'>
-								<div className='align-self-center'>
-									<img
-										src={laag1}
-										alt='Laag1'
-										className='w-50'
-									/>
+					<Container>
+						<Row>
+							<Col md='6' className='p-1'>
+								<div className='p-3 border bg-light d-flex rounded'>
+									<div className='align-self-center'>
+										<img
+											src={laag2}
+											alt='Rechte trap'
+											className='w-75'
+										/>
+									</div>
+									<div className='align-self-center ml-5'>
+										<p className='fw--600 fs--14 text-center'>
+											Rechte trap
+										</p>
+									</div>
 								</div>
-								<div className='align-self-center ml-4'>
-									<p className='fw--600 fs--14 '>
-										Rechte trap
-									</p>
+							</Col>
+							<Col md='6' className='p-1'>
+								<div className='p-3 border bg-light d-flex rounded'>
+									<div className='align-self-center'>
+										<img
+											src={laag3}
+											alt='Kwart draal'
+											className='w-75'
+										/>
+									</div>
+									<div className='align-self-center ml-5'>
+										<p className='fw--600 fs--14 text-center'>
+											Kwart draal
+										</p>
+									</div>
 								</div>
-							</div>
-						</Col>
-						<Col sm='6' md='6'>
-							<div className='bg-light  d-flex  rounded'>
-								<div className='align-self-center pl-2'>
-									<img
-										src={laag2}
-										alt='Kwart draal'
-										className='w-75'
-									/>
+							</Col>
+							<Col md='6' lg='6' className='p-1'>
+								<div className='p-3 border bg-light d-flex rounded'>
+									<div className='align-self-center'>
+										<img
+											src={laag1}
+											alt='Dubbele draal'
+											className='w-75'
+										/>
+									</div>
+									<div className='align-self-center'>
+										<p className='fw--600 fs--14 text-left'>
+											Dubbele draal
+										</p>
+									</div>
 								</div>
-								<div className='align-self-center ml-4'>
-									<p className='fw--600 fs--14'>
-										Kwart draal
-									</p>
+							</Col>
+							<Col md='6' lg='6' className='p-1'>
+								<div className='p-3 border bg-light d-flex rounded'>
+									<div className='align-self-center ml-5'>
+										<p className='fw--600 fs--24 text-center'>
+											Overlg
+										</p>
+									</div>
 								</div>
-							</div>
-						</Col>
-					</Row>
-					<Row className='w-100 '>
-						<Col sm='6' md='6'>
-							<div className='bg-light  d-flex pl-2  rounded'>
-								<div className='align-self-center'>
-									<img
-										src={laag3}
-										alt='Dubbele draal'
-										className='w-75'
-									/>
-								</div>
-								<div className='align-self-center '>
-									<p className='fw--600 fs--14 align-self-center'>
-										Dubbele draal
-									</p>
-								</div>
-							</div>
-						</Col>
-						<Col sm='6' md='6'>
-							<div className='bg-light  d-flex pl-2 py-2  rounded'>
-								<div className='align-self-center'>
-									<p className='fw--600 fs--14 align-self-center'>
-										Overlg
-									</p>
-								</div>
-							</div>
-						</Col>
-					</Row>
+							</Col>
+						</Row>
+					</Container>
 				</CardBody>
 				<CardFooter className='text-light text-center'>
 					Meer den <strong>109.000</strong> mension gingen je voor
@@ -99,4 +99,73 @@ const FormCard5 = props => {
 	);
 };
 
+// </div>
+
+// <Row className='w-100'>
+{
+	/* <Col sm='6' md='6'>
+<div className='bg-light py-2 d-flex rounded'>
+	<div className='align-self-center'>
+		<img
+			src={laag1}
+			alt='Laag1'
+			className='w-100'
+		/>
+	</div>
+	<div className='align-self-center ml-4'>
+		<p className='fw--600 fs--14 text-center'>
+			Rechte trap
+		</p>
+	</div>
+</div>
+</Col> */
+}
+{
+	/* <Col sm='6' md='6'>
+<div className='bg-light  d-flex flex-wrap  rounded'>
+	<div className='align-self-center'>
+		<img
+			src={laag2}
+			alt='Kwart draal'
+			className='w-100'
+		/>
+	</div>
+	<div className='align-self-center ml-4'>
+		<p className='fw--600 fs--14 text-center'>
+			Kwart draal
+		</p>
+	</div>
+</div>
+</Col>
+</Row> */
+}
+{
+	/* <Row className='w-100 '>
+<Col sm='6' md='6'>
+<div className='bg-light  d-flex pl-2 mt-1   rounded'>
+	<div className='align-self-center'>
+		<img
+			src={laag3}
+			alt='Dubbele draal'
+			className='w-75'
+		/>
+	</div>
+	<div className='align-self-center '>
+		<p className='fw--600 fs--14 align-self-center'>
+			Dubbele draal
+		</p>
+	</div>
+</div>
+</Col>
+<Col sm='6' md='6'>
+<div className='bg-light  d-flex pl-2 mt-1 py-2  rounded'>
+	<div className='align-self-center '>
+		<p className='fw--600 fs--14 align-self-center'>
+			Overlg
+		</p>
+	</div>
+</div>
+</Col>
+</Row> */
+}
 export default FormCard5;

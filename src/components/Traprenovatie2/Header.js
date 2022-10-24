@@ -14,6 +14,8 @@ import {
 	CardFooter,
 	Label,
 	Input,
+	FormFeedback,
+	Form,
 } from 'reactstrap';
 import Arrow from '../../assets/img/ArrowSign.png';
 
@@ -36,16 +38,173 @@ import laag3 from '../../assets/img/laag3.png';
 
 import Stairs1 from '../../assets/img/Stairs1.png';
 import Stairs2 from '../../assets/img/Stairs2.png';
+import Laminaat from '../../assets/img/Form_Laminaat.png';
+import hpl from '../../assets/img/Form_HPL_CPL.png';
+import Hout from '../../assets/img/Form_Hout.png';
+import PVC from '../../assets/img/Form_PVC.png';
+import SlimImage from '../../assets/img/Form_SlimImage.png';
+
+// import { validEmail, validPassword } from './regex.js';
 
 // import PromotionLogo from '../../assets/img/PromotionLogo';
 
 const Header = props => {
 	const [active, setActive] = useState(1);
+	const [activeButton, setActiveButton] = useState([]);
+	const [activeCards, setActiveCards] = useState([]);
+	const [activeCard4, setActiveCard4] = useState([]);
+	const [activeCard5, setActiveCard5] = useState([]);
+	const [activeCard6, setActiveCard6] = useState([]);
+	const [activeCard7, setActiveCard7] = useState([]);
+	const [voornaam, setVoorNaam] = useState();
+	const [achternaam, setAchternaam] = useState();
+	const [email, setEmail] = useState();
+	const [telefoonnummer, setTelefoornnummer] = useState();
 
 	const NextCard = () => {
 		setActive(active + 1);
-		console.log(active, 'active in button');
+		// console.log(active, 'active');
 	};
+
+	// FormButtonHander
+	const FormButtonHandler = val => {
+		let temp = [...activeButton];
+
+		let tempVal = temp.find(v => v === val);
+		// console.log(tempVal, '=====>tempVal');
+		if (tempVal) {
+			// temp.push(val);
+			temp = temp.filter(v => v != tempVal);
+		} else {
+			temp.push(val);
+		}
+		setActiveButton(temp);
+	};
+	// console.log(activeButton, 'ActiveButton');
+
+	// Active Card 1 Function Change background color
+	const CardClickHandler = val => {
+		let temp = [...activeCards];
+
+		let tempVal = temp.find(v => v === val);
+		// console.log(tempVal, '=====>tempVal');
+		if (tempVal) {
+			// temp.push(val);
+			temp = temp.filter(v => v != tempVal);
+		} else {
+			temp.push(val);
+		}
+		setActiveCards(temp);
+	};
+
+	const fourthCardClickHandler = val => {
+		let temp = [...activeCard4];
+		let tempVal = temp.find(v => v === val);
+		// console.log(tempVal, '=====>tempVal');
+		if (tempVal) {
+			// temp.push(val);
+			temp = temp.filter(v => v != tempVal);
+		} else {
+			temp.push(val);
+		}
+		setActiveCard4(temp);
+	};
+
+	const FifthCardClickHandler = val => {
+		let temp = [...activeCard5];
+		let tempVal = temp.find(v => v === val);
+		// console.log(tempVal, '=====>tempVal');
+		if (tempVal) {
+			// temp.push(val);
+			temp = temp.filter(v => v != tempVal);
+		} else {
+			temp.push(val);
+		}
+		setActiveCard5(temp);
+	};
+	////
+	const sixthCardClickHandler = val => {
+		let temp = [...activeCard6];
+		let tempVal = temp.find(v => v === val);
+		// console.log(tempVal, '=====>tempVal');
+		if (tempVal) {
+			// temp.push(val);
+			temp = temp.filter(v => v != tempVal);
+		} else {
+			temp.push(val);
+		}
+		setActiveCard6(temp);
+	};
+
+	// /  /  /////   ////          ////
+	const seventhCardClickHandler = val => {
+		let temp = [...activeCard7];
+		let tempVal = temp.find(v => v === val);
+		// console.log(tempVal, '=====>tempVal');
+		if (tempVal) {
+			// temp.push(val);
+			temp = temp.filter(v => v != tempVal);
+		} else {
+			temp.push(val);
+		}
+		setActiveCard7(temp);
+	};
+
+	// console.log(activeCard7);
+
+	// Check Regex
+	const checkVoorNaamRegex = val => {
+		let validName = /^([a-zA-Z]{4})/;
+		if (val != '') {
+			if (validName.test(val)) {
+				return false;
+			} else {
+				return true;
+			}
+		} else {
+			return false;
+		}
+	};
+
+	const checkAchterNaamRegex = val => {
+		let validName = /^([a-zA-Z]{4})$/;
+		if (val != '') {
+			if (validName.test(val)) {
+				return false;
+			} else {
+				return true;
+			}
+		} else {
+			return false;
+		}
+	};
+
+	const checkEmailRegex = val => {
+		let validName = /^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$/;
+		if (val != '') {
+			if (validName.test(val)) {
+				return false;
+			} else {
+				return true;
+			}
+		} else {
+			return false;
+		}
+	};
+
+	const checkTelefoornNummerRegex = val => {
+		let validName = /^([0-9]{8})$/;
+		if (val != '') {
+			if (validName.test(val)) {
+				return false;
+			} else {
+				return true;
+			}
+		} else {
+			return false;
+		}
+	};
+
 	return (
 		<>
 			<Container className='px-md-5'>
@@ -125,7 +284,10 @@ const Header = props => {
 						</div>
 						{active === 1 ? (
 							<>
-								<Card className='px-3 mx-3 mt-3 mb-3 bg-site-primary'>
+								<Card
+									style={{ height: '450px' }}
+									className='px-3 mx-3 mt-3 mb-3 bg-site-primary'
+								>
 									<CardHeader className='text-light font-weight-normal border-bottom-1  border-light border-w-75 w-85'>
 										<p className='w-100 fs--18 fw--400'>
 											Ben je eigenaar van de woning?
@@ -139,7 +301,18 @@ const Header = props => {
 													md='6'
 													className='p-1'
 												>
-													<Button className='w-100 px-5 py-3 bg-light text-dark'>
+													<Button
+														className={
+															activeButton.includes(
+																1
+															)
+																? 'w-100 px-5 py-3 bg-primary text-dark'
+																: 'w-100 px-5 py-3 bg-light text-dark'
+														}
+														onClick={() =>
+															FormButtonHandler(1)
+														}
+													>
 														Ja{' '}
 													</Button>
 												</Col>
@@ -148,27 +321,54 @@ const Header = props => {
 													md='6'
 													className='p-1'
 												>
-													<Button className='w-100 px-5 py-3 bg-light text-dark'>
+													<Button
+														className={
+															activeButton.includes(
+																2
+															)
+																? 'w-100 px-5 py-3 bg-primary text-dark'
+																: 'w-100 px-5 py-3 bg-light text-dark'
+														}
+														onClick={() =>
+															FormButtonHandler(2)
+														}
+													>
 														Nee{' '}
 													</Button>
 												</Col>
 											</Row>
 										</CardText>
-										<Row className='px-3 pt-5 mx-3 '>
-											<Button
-												className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
-												onClick={NextCard}
-											>
-												VERDER{' '}
-												<span>
-													<i
-														class='fa fa-arrow-right'
-														aria-hidden='true'
-													></i>
-												</span>
-											</Button>
-										</Row>
 									</CardBody>
+									<Row className='px-3 pt-5 mx-3 '>
+										{activeButton.length > 0 ? (
+											<>
+												<Button
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+													onClick={NextCard}
+												>
+													VERDER{' '}
+													<span>
+														<i
+															class='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>{' '}
+											</>
+										) : (
+											<>
+												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+													VERDER{' '}
+													<span>
+														<i
+															class='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										)}
+									</Row>
 									<CardFooter className='text-light text-center'>
 										Meer den <strong>109.000</strong>{' '}
 										mension gingen je voor
@@ -177,50 +377,199 @@ const Header = props => {
 							</>
 						) : active === 2 ? (
 							<>
-								<Card className='px-3 mx-3 mt-3 mb-3 bg-site-primary'>
+								<Card
+									style={{ height: '450px' }}
+									className='px-3 mx-3 mt-3 mb-3 bg-site-primary card'
+								>
 									<CardHeader className='text-light font-weight-normal border-bottom-1  border-light border-w-75 w-85'>
 										<p className='w-100 fs--18 fw--400'>
-											Ben je eigenaar van de woning?
+											Wat is de huidige trapbekleding?
 										</p>
 									</CardHeader>
 									<CardBody color='text-light'>
-										<CardText>
-											<Row className='justify-content-around py-4'>
-												<Col
-													xs='6'
-													md='6'
-													className='p-1'
+										<Row className='w-100 py-2 '>
+											<Col sm='6' md='6'>
+												<div
+													className={
+														activeCards.includes(1)
+															? 'bg-primary  d-flex py-3 h-100 w-100 rounded'
+															: 'bg-light  d-flex py-3 h-100 w-100 rounded'
+													}
+													onClick={() =>
+														CardClickHandler(1)
+													}
 												>
-													<Button className='w-100 px-5 py-3 bg-light text-dark'>
-														Ja{' '}
-													</Button>
-												</Col>
-												<Col
-													xs='6'
-													md='6'
-													className='p-1'
+													<div className='align-self-center pl-2'>
+														<img
+															src={Hout}
+															alt='Hout'
+															className='w-75'
+														/>
+													</div>
+													<div className='align-self-center ml-4'>
+														<p className='fw--600 fs--14'>
+															Hout
+														</p>
+													</div>
+												</div>
+											</Col>
+											<Col sm='6' md='6'>
+												<div
+													className={
+														activeCards.includes(2)
+															? 'bg-primary d-flex h-100 w-100 rounded'
+															: 'bg-light d-flex h-100 w-100 rounded'
+													}
+													onClick={() =>
+														CardClickHandler(2)
+													}
 												>
-													<Button className='w-100 px-5 py-3 bg-light text-dark'>
-														Nee{' '}
-													</Button>
-												</Col>
-											</Row>
-										</CardText>
-										<Row className='px-3 pt-5 mx-3 '>
-											<Button
-												className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
-												onClick={NextCard}
-											>
-												VERDER{' '}
-												<span>
-													<i
-														class='fa fa-arrow-right'
-														aria-hidden='true'
-													></i>
-												</span>
-											</Button>
+													<div className='align-self-center pl-2'>
+														<img
+															src={Laminaat}
+															alt='Laminaat'
+															className='w-50'
+														/>
+														{/* </div> */}
+														{/* <div className='mx-3 align-self-center'> */}
+														<img
+															src={hpl}
+															alt='hpl'
+															className='w-50'
+														/>
+													</div>
+													<div className='align-self-center ml-4 pr-2'>
+														<p className='fw--600 fs--14 '>
+															Laminaat
+														</p>
+														<p className='fw--600 fs--14 '>
+															HPL/CPL
+														</p>
+													</div>
+												</div>
+											</Col>
+										</Row>
+										<Row className='w-100 py-2'>
+											<Col sm='6'>
+												<div
+													className={
+														activeCards.includes(3)
+															? 'bg-primary  d-flex py-2 h-100 w-100 rounded'
+															: 'bg-light  d-flex py-2 h-100 w-100 rounded'
+													}
+													onClick={() =>
+														CardClickHandler(3)
+													}
+												>
+													<div className='align-self-center pl-2'>
+														<img
+															src={PVC}
+															alt='PVC'
+															className='w-75'
+														/>
+													</div>
+													<div className='align-self-center '>
+														<p className='fw--600 fs--14 align-self-center'>
+															PVC / Vinyl
+														</p>
+													</div>
+												</div>
+											</Col>
+											<Col sm='6'>
+												<div
+													className={
+														activeCards.includes(4)
+															? 'bg-primary  d-flex py-2 h-100 w-100 rounded'
+															: 'bg-light  d-flex py-2 h-100 w-100 rounded'
+													}
+													onClick={() =>
+														CardClickHandler(4)
+													}
+												>
+													<div className='align-self-center pl-2'>
+														<img
+															src={SlimImage}
+															alt='SlimImage'
+															className='w-75'
+														/>
+													</div>
+													<div className='align-self-center'>
+														<p className='fw--600 fs--14'>
+															Tapijt
+														</p>
+													</div>
+												</div>
+											</Col>
+										</Row>
+										<Row className='w-100 d-flex py-2'>
+											<Col sm='6'>
+												<div
+													className={
+														activeCards.includes(5)
+															? 'bg-primary  d-flex py-2 h-100 w-100 rounded'
+															: 'bg-light  d-flex py-2 h-100 w-100 rounded'
+													}
+													onClick={() =>
+														CardClickHandler(5)
+													}
+												>
+													<div className='align-self-center ml-4'>
+														<p className='fw--600 fs--16'>
+															Green
+														</p>
+													</div>
+												</div>
+											</Col>
+											<Col sm='6'>
+												<div
+													className={
+														activeCards.includes(6)
+															? 'bg-primary  d-flex py-2 h-100 w-100 rounded'
+															: 'bg-light d-flex py-2 h-100 w-100 rounded'
+													}
+													onClick={() =>
+														CardClickHandler(6)
+													}
+												>
+													<div className='align-self-center ml-4'>
+														<p className='fw--600 fs--16'>
+															Overig
+														</p>
+													</div>
+												</div>
+											</Col>
 										</Row>
 									</CardBody>
+									<Row className='px-3 pt-5 mx-3 '>
+										{activeCards.length > 0 ? (
+											<>
+												<Button
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+													onClick={NextCard}
+												>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										) : (
+											<>
+												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										)}
+									</Row>
 									<CardFooter className='text-light text-center'>
 										Meer den <strong>109.000</strong>{' '}
 										mension gingen je voor
@@ -229,7 +578,10 @@ const Header = props => {
 							</>
 						) : active === 3 ? (
 							<>
-								<Card className='px-3 mx-3 mt-3 mb-3 bg-site-primary'>
+								<Card
+									style={{ height: '450px' }}
+									className='h-xs-auto h-sm-auto px-3 mx-3 mt-3 mb-3 bg-site-primary card'
+								>
 									<CardHeader className='text-light font-weight-normal border-bottom-1  border-light border-w-75 w-85'>
 										<p className='w-100 fs--18 fw--400'>
 											Wat is de gewenste trapbekleding?
@@ -237,8 +589,19 @@ const Header = props => {
 									</CardHeader>
 									<CardBody color='text-light'>
 										<Row className='w-100 py-2'>
-											<Col sm='6' md='6'>
-												<div className='bg-light d-flex pl-2  rounded'>
+											<Col sm='6' md='6' className='p-1'>
+												<div
+													className={
+														activeCard4.includes(1)
+															? 'bg-primary d-flex pl-2  rounded'
+															: 'bg-light d-flex pl-2  rounded'
+													}
+													onClick={() =>
+														fourthCardClickHandler(
+															1
+														)
+													}
+												>
 													<div className='align-self-center'>
 														<img
 															src={
@@ -253,23 +616,34 @@ const Header = props => {
 															className='w-50'
 														/>
 													</div>
-													<div className='align-self-center ml-4'>
-														<p className='fw--600 fs--14 '>
+													<div className=''>
+														<p className='fw--600 fs--12 '>
 															Laminaat
 														</p>
-														<p className='fw--600 fs--14 '>
+														<p className='fw--600 fs--12 '>
 															HPL/CPL
 														</p>
 													</div>
 												</div>
 											</Col>
-											<Col sm='6' md='6'>
-												<div className='bg-light  d-flex py-3  rounded'>
+											<Col sm='6' md='6' className='p-1'>
+												<div
+													className={
+														activeCard4.includes(2)
+															? 'bg-primary  d-flex py-3  rounded'
+															: 'bg-light  d-flex py-3  rounded'
+													}
+													onClick={() =>
+														fourthCardClickHandler(
+															2
+														)
+													}
+												>
 													<div className='align-self-center pl-2'>
 														<img
 															src={FormCardHout}
 															alt='Hout'
-															className='w-75'
+															className='w-50'
 														/>
 													</div>
 													<div className='align-self-center ml-4'>
@@ -281,13 +655,24 @@ const Header = props => {
 											</Col>
 										</Row>
 										<Row className='w-100 py-2'>
-											<Col sm='6' md='6'>
-												<div className='bg-light  d-flex py-2 pl-2  rounded'>
+											<Col sm='6' md='6' className='p-1'>
+												<div
+													className={
+														activeCard4.includes(3)
+															? 'bg-primary  d-flex py-2 pl-2  rounded'
+															: 'bg-light  d-flex py-2 pl-2  rounded'
+													}
+													onClick={() =>
+														fourthCardClickHandler(
+															3
+														)
+													}
+												>
 													<div className='align-self-center'>
 														<img
 															src={FormCardPVC}
 															alt='PVC'
-															className='w-75'
+															className='w-50'
 														/>
 													</div>
 													<div className='align-self-center '>
@@ -297,8 +682,19 @@ const Header = props => {
 													</div>
 												</div>
 											</Col>
-											<Col sm='6' md='6'>
-												<div className='bg-light  d-flex py-2 pl-2  rounded'>
+											<Col sm='6' md='6' className='p-1'>
+												<div
+													className={
+														activeCard4.includes(4)
+															? 'bg-primary  d-flex py-2 pl-2  rounded'
+															: 'bg-light  d-flex py-2 pl-2  rounded'
+													}
+													onClick={() =>
+														fourthCardClickHandler(
+															4
+														)
+													}
+												>
 													<div className='align-self-center'>
 														<p className='fw--600 fs--14 align-self-center'>
 															Geen idee, adviseer
@@ -308,21 +704,37 @@ const Header = props => {
 												</div>
 											</Col>
 										</Row>
-										<Row className='px-3 pt-5 mx-3 '>
-											<Button
-												className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
-												onClick={NextCard}
-											>
-												VERDER{' '}
-												<span>
-													<i
-														class='fa fa-arrow-right'
-														aria-hidden='true'
-													></i>
-												</span>
-											</Button>
-										</Row>
 									</CardBody>
+									<Row className='px-3 pt-5 mx-3 '>
+										{activeCard4.length > 0 ? (
+											<>
+												<Button
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+													onClick={NextCard}
+												>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										) : (
+											<>
+												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										)}
+									</Row>
 									<CardFooter className='text-light text-center'>
 										Meer den <strong>109.000</strong>{' '}
 										mension gingen je voor
@@ -331,89 +743,168 @@ const Header = props => {
 							</>
 						) : active === 4 ? (
 							<>
-								<Card className='px-3 mx-3 mt-3 mb-3 bg-site-primary'>
+								<Card
+									style={{ height: '450px' }}
+									className='h-xs-auto h-sm-auto px-3 mx-3 mt-3 mb-3 bg-site-primary card'
+								>
 									<CardHeader className='text-light font-weight-normal border-bottom-1  border-light border-w-75 w-85'>
 										<p className='w-100 fs--18 fw--400'>
 											Wat is het model van de trap?
 										</p>
 									</CardHeader>
 									<CardBody color='text-light'>
-										<Row className='w-100'>
-											<Col sm='6' md='6'>
-												<div className='bg-light py-2 d-flex rounded'>
-													<div className='align-self-center'>
-														<img
-															src={laag1}
-															alt='Laag1'
-															className='w-50'
-														/>
+										<Container>
+											<Row>
+												<Col md='6' className='p-1'>
+													<div
+														className={
+															activeCard5.includes(
+																1
+															)
+																? 'p-3 border bg-primary d-flex  h-100 w-100 rounded'
+																: 'p-3 border bg-light d-flex  h-100 w-100 rounded'
+														}
+														onClick={() =>
+															FifthCardClickHandler(
+																1
+															)
+														}
+													>
+														<div className='align-self-center'>
+															<img
+																src={laag2}
+																alt='Rechte trap'
+																className='w-75'
+															/>
+														</div>
+														<div className='align-self-center ml-5'>
+															<p className='fw--600 fs--14 text-center'>
+																Rechte trap
+															</p>
+														</div>
 													</div>
-													<div className='align-self-center ml-4'>
-														<p className='fw--600 fs--14 '>
-															Rechte trap
-														</p>
+												</Col>
+												<Col md='6' className='p-1'>
+													<div
+														className={
+															activeCard5.includes(
+																2
+															)
+																? 'p-3 border bg-primary d-flex h-100 w-100 rounded'
+																: 'p-3 border bg-light d-flex h-100 w-100 rounded'
+														}
+														onClick={() =>
+															FifthCardClickHandler(
+																2
+															)
+														}
+													>
+														<div className='align-self-center'>
+															<img
+																src={laag3}
+																alt='Kwart draal'
+																className='w-75'
+															/>
+														</div>
+														<div className='align-self-center'>
+															<p className='fw--600 fs--14 text-center'>
+																Kwart draal
+															</p>
+														</div>
 													</div>
-												</div>
-											</Col>
-											<Col sm='6' md='6'>
-												<div className='bg-light  d-flex  rounded'>
-													<div className='align-self-center pl-2'>
-														<img
-															src={laag2}
-															alt='Kwart draal'
-															className='w-75'
-														/>
+												</Col>
+												<Col
+													md='6'
+													lg='6'
+													className='p-1'
+												>
+													<div
+														className={
+															activeCard5.includes(
+																3
+															)
+																? 'p-3 border bg-primary d-flex  h-100 w-100 rounded'
+																: 'p-3 border bg-light d-flex  h-100 w-100 rounded'
+														}
+														onClick={() =>
+															FifthCardClickHandler(
+																3
+															)
+														}
+													>
+														<div className='align-self-center'>
+															<img
+																src={laag1}
+																alt='Dubbele draal'
+																className='w-75'
+															/>
+														</div>
+														<div className='align-self-center ml-5'>
+															<p className='fw--600 fs--14 text-center'>
+																Dubbele draal
+															</p>
+														</div>
 													</div>
-													<div className='align-self-center ml-4'>
-														<p className='fw--600 fs--14'>
-															Kwart draal
-														</p>
+												</Col>
+												<Col
+													md='6'
+													lg='6'
+													className='p-1'
+												>
+													<div
+														className={
+															activeCard5.includes(
+																4
+															)
+																? 'p-3 border bg-primary d-flex  h-100 w-100 rounded'
+																: 'p-3 border bg-light d-flex  h-100 w-100 rounded'
+														}
+														onClick={() =>
+															FifthCardClickHandler(
+																4
+															)
+														}
+													>
+														<div className='align-self-center ml-5'>
+															<p className='fw--600 fs--24 text-center'>
+																Overlg
+															</p>
+														</div>
 													</div>
-												</div>
-											</Col>
-										</Row>
-										<Row className='w-100 '>
-											<Col sm='6' md='6'>
-												<div className='bg-light  d-flex pl-2  rounded'>
-													<div className='align-self-center'>
-														<img
-															src={laag3}
-															alt='Dubbele draal'
-															className='w-75'
-														/>
-													</div>
-													<div className='align-self-center '>
-														<p className='fw--600 fs--14 align-self-center'>
-															Dubbele draal
-														</p>
-													</div>
-												</div>
-											</Col>
-											<Col sm='6' md='6'>
-												<div className='bg-light  d-flex pl-2 py-2  rounded'>
-													<div className='align-self-center'>
-														<p className='fw--600 fs--14 align-self-center'>
-															Overlg
-														</p>
-													</div>
-												</div>
-											</Col>
-										</Row>
-										<Row className='px-3 pt-5 mx-3 '>
-											<Button
-												className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
-												onClick={NextCard}
-											>
-												VERDER{' '}
-												<span>
-													<i
-														class='fa fa-arrow-right'
-														aria-hidden='true'
-													></i>
-												</span>
-											</Button>
-										</Row>
+												</Col>
+											</Row>
+										</Container>
 									</CardBody>
+									<Row className='px-3 pt-5 mx-3'>
+										{activeCard5.length > 0 ? (
+											<>
+												<Button
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+													onClick={NextCard}
+												>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										) : (
+											<>
+												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										)}
+									</Row>
 									<CardFooter className='text-light text-center'>
 										Meer den <strong>109.000</strong>{' '}
 										mension gingen je voor
@@ -422,7 +913,10 @@ const Header = props => {
 							</>
 						) : active === 5 ? (
 							<>
-								<Card className='px-3 mx-3 mt-3 mb-3 bg-site-primary'>
+								<Card
+									style={{ height: '450px' }}
+									className='h-xs-auto h-sm-auto px-3 mx-3 mt-3 mb-3 bg-site-primary card'
+								>
 									<CardHeader className='text-light font-weight-normal border-bottom-1  border-light border-w-75 w-85'>
 										<p className='w-100 fs--18 fw--400'>
 											Betreft het een gesloten of open
@@ -432,7 +926,16 @@ const Header = props => {
 									<CardBody color='text-light'>
 										<Row className='w-100 py-2 '>
 											<Col sm='6' md='6'>
-												<div className='bg-light  d-flex py-3 rounded'>
+												<div
+													className={
+														activeCard6.includes(1)
+															? 'bg-primary  d-flex py-3 rounded'
+															: 'bg-light  d-flex py-3 rounded'
+													}
+													onClick={() =>
+														sixthCardClickHandler(1)
+													}
+												>
 													<div className='align-self-center pl-2'>
 														<img
 															src={Stairs1}
@@ -448,7 +951,16 @@ const Header = props => {
 												</div>
 											</Col>
 											<Col sm='6' md='6'>
-												<div className='bg-light d-flex py-3 rounded'>
+												<div
+													className={
+														activeCard6.includes(2)
+															? 'bg-primary  d-flex py-3 rounded'
+															: 'bg-light  d-flex py-3 rounded'
+													}
+													onClick={() =>
+														sixthCardClickHandler(2)
+													}
+												>
 													<div className='align-self-center pl-2'>
 														<img
 															src={Stairs2}
@@ -464,22 +976,37 @@ const Header = props => {
 												</div>
 											</Col>
 										</Row>
-
-										<Row className='px-3 pt-5 mx-3 '>
-											<Button
-												className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
-												onClick={NextCard}
-											>
-												VERDER{' '}
-												<span>
-													<i
-														class='fa fa-arrow-right'
-														aria-hidden='true'
-													></i>
-												</span>
-											</Button>
-										</Row>
 									</CardBody>
+									<Row className='px-3 pt-5 mx-3 '>
+										{activeCard6.length > 0 ? (
+											<>
+												<Button
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+													onClick={NextCard}
+												>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										) : (
+											<>
+												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										)}
+									</Row>
 									<CardFooter className='text-light text-center'>
 										Meer den <strong>109.000</strong>{' '}
 										mension gingen je voor
@@ -488,49 +1015,116 @@ const Header = props => {
 							</>
 						) : active === 6 ? (
 							<>
-								<Card className='px-3 mx-3 mt-3 mb-3 bg-site-primary'>
+								<Card
+									style={{ height: '450px' }}
+									className='px-3 mx-3 mt-3 mb-3 bg-site-primary card'
+								>
 									<CardHeader className='text-light font-weight-normal border-bottom-1  border-light border-w-75 w-85'>
 										<p className='w-100 fs--18 fw--400'>
 											Wat is de huidige trapbekleding?
 										</p>
 									</CardHeader>
 									<CardBody color='text-light'>
-										<Row className='w-100 my-3 bg-light rounded text-center'>
-											<div className='align-self-center ml-4 mx-auto py-2'>
-												<p className='fw--600 fs--14'>
+										<Row
+											className={
+												activeCard7.includes(1)
+													? 'w-100 my-3 bg-primary rounded text-center'
+													: 'w-100 my-3 bg-light rounded text-center'
+											}
+										>
+											<div
+												className={
+													activeCard7.includes(1)
+														? 'align-self-center bg-primary  mx-auto py-2'
+														: 'align-self-center bg-light mx-auto py-2'
+												}
+												onClick={() =>
+													seventhCardClickHandler(1)
+												}
+											>
+												<p className='fw--600 fs--14 align-self-center'>
 													In overleg
 												</p>
 											</div>
 										</Row>
-										<Row className='w-100 my-3 bg-light rounded'>
-											<div className='align-self-center  bg-light ml-4 mx-auto py-2'>
-												<p className='fw--600 fs--14'>
+										<Row
+											className={
+												activeCard7.includes(2)
+													? 'w-100 my-3 bg-primary rounded'
+													: 'w-100 my-3 bg-light rounded'
+											}
+										>
+											<div
+												className={
+													activeCard7.includes(2)
+														? 'align-self-center bg-primary ml-4 mx-auto py-2'
+														: 'align-self-center bg-light ml-4 mx-auto py-2'
+												}
+												onClick={() =>
+													seventhCardClickHandler(2)
+												}
+											>
+												<p className='fw--600 fs--14 '>
 													Binnen 3 maanden
 												</p>
 											</div>
 										</Row>
-										<Row className='w-100 my-2 bg-light rounded'>
-											<div className='align-self-center bg-light  ml-4 mx-auto py-2'>
+										<Row
+											className={
+												activeCard7.includes(3)
+													? 'w-100 my-2 bg-primary rounded'
+													: 'w-100 my-2 bg-light rounded'
+											}
+											onClick={() =>
+												seventhCardClickHandler(3)
+											}
+										>
+											<div
+												className={
+													activeCard7.includes(3)
+														? 'align-self-center bg-primary  ml-4 mx-auto py-2'
+														: 'align-self-center bg-light  ml-4 mx-auto py-2'
+												}
+												onClick={() =>
+													seventhCardClickHandler(3)
+												}
+											>
 												<p className='fw--600 fs--14'>
 													Binnen 3 tot 6 maanden
 												</p>
 											</div>
 										</Row>
-										<Row className='px-3 pt-5 mx-3 '>
-											<Button
-												className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
-												onClick={NextCard}
-											>
-												VERDER{' '}
-												<span>
-													<i
-														class='fa fa-arrow-right'
-														aria-hidden='true'
-													></i>
-												</span>
-											</Button>
-										</Row>
 									</CardBody>
+									<Row className='px-3 pt-5 mx-3 '>
+										{activeCard7.length > 0 ? (
+											<>
+												<Button
+													className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+													onClick={NextCard}
+												>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										) : (
+											<>
+												<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+													VERDER{' '}
+													<span>
+														<i
+															className='fa fa-arrow-right'
+															aria-hidden='true'
+														></i>
+													</span>
+												</Button>
+											</>
+										)}
+									</Row>
 									<CardFooter className='text-light text-center'>
 										Meer den <strong>109.000</strong>{' '}
 										mension gingen je voor
@@ -539,7 +1133,10 @@ const Header = props => {
 							</>
 						) : active === 7 ? (
 							<>
-								<Card className='px-3 mx-3 mt-3 mb-3 bg-site-primary'>
+								<Card
+									style={{ height: '450px' }}
+									className='px-3 mx-3 mt-3 mb-3 bg-site-primary card'
+								>
 									<CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85'>
 										<Col
 											md='8'
@@ -564,81 +1161,176 @@ const Header = props => {
 											/>
 										</Col>
 									</CardHeader>
-									<CardBody color='text-light'>
-										<CardText>
-											<Row>
-												<Col
-													md='6'
-													xs='6'
-													className='p-1'
-												>
-													<Label className='text-light fs--16 fw--400'>
-														Voornaam*
-													</Label>
-													<Input type='text' />
-												</Col>
-												<Col
-													md='6'
-													xs='6'
-													className='p-1'
-												>
-													<Label className='text-light fs--16 fw--400'>
-														Achternaam*
-													</Label>
-													<Input type='text' />
-												</Col>
-											</Row>
-											<Row>
-												<Col
-													md='6'
-													xs='6'
-													className='p-1'
-												>
-													<Label className='text-light fs--16 fw--400'>
-														E-mail*
-													</Label>
-													<Input type='text' />
-												</Col>
-												<Col
-													md='6'
-													xs='6'
-													className='p-1'
-												>
-													<Label className='text-light fs--16 fw--400'>
-														Telefoonnummer*
-													</Label>
-													<Input type='text' />
-												</Col>
-											</Row>
-										</CardText>
-										<Row className='px-3 pt-5 mx-3 '>
-											<Button
-												className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
-												onClick={NextCard}
-											>
-												VERDER{' '}
-												<span>
-													<i
-														class='fa fa-arrow-right'
-														aria-hidden='true'
-													></i>
-												</span>
-											</Button>
+									<Form onSubmit={NextCard}>
+										<CardBody color='text-light'>
+											<CardText>
+												<Row>
+													<Col
+														md='6'
+														xs='6'
+														className='p-1'
+													>
+														<Label className='text-light fs--16 fw--400'>
+															Voornaam*
+														</Label>
+														<Input
+															type='text'
+															invalid={checkVoorNaamRegex(
+																voornaam
+															)}
+															onChange={e =>
+																setVoorNaam(
+																	e.target
+																		.value
+																)
+															}
+															required
+														/>
+														<FormFeedback invalid>
+															<small>
+																Invalid Format
+															</small>
+														</FormFeedback>
+													</Col>
+													<Col
+														md='6'
+														xs='6'
+														className='p-1'
+													>
+														<Label className='text-light fs--16 fw--400'>
+															Achternaam*
+														</Label>
+														<Input
+															type='text'
+															invalid={checkAchterNaamRegex(
+																achternaam
+															)}
+															onChange={e =>
+																setAchternaam(
+																	e.target
+																		.value
+																)
+															}
+															required
+														/>
+														<FormFeedback invalid>
+															<small>
+																Invalid Format
+															</small>
+														</FormFeedback>
+													</Col>
+												</Row>
+												<Row>
+													<Col
+														md='6'
+														xs='6'
+														className='p-1'
+													>
+														<Label className='text-light fs--16 fw--400'>
+															E-mail*
+														</Label>
+														<Input
+															type='text'
+															invalid={checkEmailRegex(
+																email
+															)}
+															onChange={e =>
+																setEmail(
+																	e.target
+																		.value
+																)
+															}
+															required
+														/>
+														<FormFeedback invalid>
+															<small>
+																Invalid Format
+															</small>
+														</FormFeedback>
+													</Col>
+													<Col
+														md='6'
+														xs='6'
+														className='p-1'
+													>
+														<Label className='text-light fs--16 fw--400'>
+															Telefoonnummer*
+														</Label>
+														<Input
+															type='text'
+															invalid={checkTelefoornNummerRegex(
+																telefoonnummer
+															)}
+															onChange={e =>
+																setTelefoornnummer(
+																	e.target
+																		.value
+																)
+															}
+															required
+														/>
+														<FormFeedback invalid>
+															<small>
+																Invalid Format
+															</small>
+														</FormFeedback>
+													</Col>
+												</Row>
+											</CardText>
+										</CardBody>
+										<Row className='px-3 pt-5 mx-3'>
+											{checkVoorNaamRegex == false &&
+											checkAchterNaamRegex == false &&
+											checkEmailRegex == false &&
+											checkTelefoornNummerRegex ==
+												false &&
+											activeCards.length > 0 ? (
+												<>
+													<Button
+														className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
+														type='submit'
+														// onClick={NextCard}
+													>
+														VERDER{' '}
+														<span>
+															<i
+																className='fa fa-arrow-right'
+																aria-hidden='true'
+															></i>
+														</span>
+													</Button>
+												</>
+											) : (
+												<>
+													<Button className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'>
+														VERDER{' '}
+														<span>
+															<i
+																className='fa fa-arrow-right'
+																aria-hidden='true'
+															></i>
+														</span>
+													</Button>
+												</>
+											)}
 										</Row>
-									</CardBody>
+									</Form>
 									<CardFooter className='text-light text-center'>
 										Meer den <strong>109.000</strong>{' '}
 										mension gingen je voor
 									</CardFooter>
 								</Card>
 							</>
-						) : active === 8 ? (
+						) : (
 							<>
-								<Card className='px-3 mx-3 mt-3 mb-3 bg-site-primary'>
+								<Card
+									style={{ height: '450px' }}
+									className='px-3 mx-3 mt-3 mb-3 bg-site-primary card'
+								>
 									<CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85'>
 										<Col
-											md='8'
-											lg='8'
+											md='9'
+											lg='9'
 											sm='9'
 											className='p-0'
 										>
@@ -647,8 +1339,8 @@ const Header = props => {
 											</p>
 										</Col>
 										<Col
-											md='4'
-											lg='4'
+											md='3'
+											lg='3'
 											sm='3'
 											className='p-0'
 										>
@@ -672,7 +1364,7 @@ const Header = props => {
 												buurt toe.
 											</p>
 										</CardText>
-										<Row className='px-3 pt-5 mx-3 '>
+										{/* <Row className='px-3 pt-5 mx-3 '>
 											<Button
 												className='btn btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0 w-100'
 												onClick={NextCard}
@@ -685,7 +1377,7 @@ const Header = props => {
 													></i>
 												</span>
 											</Button>
-										</Row>
+										</Row> */}
 									</CardBody>
 									<CardFooter className='text-light text-center'>
 										Meer den <strong>109.000</strong>{' '}
@@ -693,8 +1385,6 @@ const Header = props => {
 									</CardFooter>
 								</Card>
 							</>
-						) : (
-							'Will Getback soon'
 						)}
 					</Col>
 				</Row>
