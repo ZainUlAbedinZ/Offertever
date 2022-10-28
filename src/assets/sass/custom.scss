@@ -120,7 +120,7 @@ small {
 	}
 
 	@media screen and (min-width: 768.8px) and (max-width: 1024px) {
-		width: 153px !important;
+		// width: 153px !important;
 		margin-top: -71px;
 	}
 }
@@ -129,4 +129,17 @@ small {
 	@media (max-width: 587.8px) {
 		height: auto !important;
 	}
+	// Button,
+	// div {
+	// 	:hover {
+	// 		cursor: pointer;
+	// 	}
+	// }
+}
+.activeCard3,
+.activeCard4,
+.activeCard5,
+.activeCard6,
+.activeCard7 {
+	cursor: pointer;
 }

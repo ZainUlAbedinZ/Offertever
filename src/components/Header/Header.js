@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useState } from 'react';
 
 import {
@@ -24,7 +24,6 @@ import heroTextLogo from '../../assets/img/hero_section_Col_6_text_logo.png';
 import HeroTextTopLogo from '../../assets/img/hero_section_Col_6_text_logo-top.png';
 
 import ThumbsUp from '../../assets/img/ThumbCard.png';
-// import { validEmail, validPassword } from './regex.js';
 
 import {
 	validEmail,
@@ -40,38 +39,13 @@ import {
 // import PromotionLogo from '../../assets/img/PromotionLogo';
 
 const Header = props => {
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-	// const []
-	const [emailErr, setEmailErr] = useState(false);
-	const [pwdError, setPwdError] = useState(false);
-	const [pstCodeError, setPstCodeError] = useState(false);
-
-	const [strtCodeError, setStrtCodeError] = useState(false);
-	const [hustCodeError, setHustCodeError] = useState(false);
-	const [wnPlatesError, setWnPlatesError] = useState(false);
-
 	const [postCode, setPostCode] = useState('');
 	const [straat, setStraat] = useState('');
 	const [huisnument, setHuisnument] = useState('');
 	const [WoonPlates, setWoonPlates] = useState('');
-	// Validation
-	// const validate = () => {
-	// if (!validPostCode.test(postCode)) {
-	// 	setPstCodeError(true);
-	// }
-	// if (!validStraat.test(straat)) {
-	// 	setStrtCodeError(true);
-	// }
-	// if (!validHuisnument.test(huisnument)) {
-	// 	setHustCodeError(true);
-	// }
-	// if (!validWoonPlates.test(WoonPlates)) {
-	// 	setWnPlatesError(true);
-	// }
-	// if (checkPostCodeRegex == false) {
-	// }
-	// };
+	const [trapreData, setTrapreData] = useState({});
+
+	let history = useHistory();
 
 	const checkZipRegex = val => {
 		let validName = /^([0-9]{4}[a-zA-Z]{2})$/;
@@ -94,9 +68,10 @@ const Header = props => {
 			} else {
 				return true;
 			}
-		} else {
-			return false;
 		}
+		//  else {
+		// 	return false;
+		// }
 	};
 
 	const checkStraatRegex = straat => {
@@ -107,9 +82,10 @@ const Header = props => {
 			} else {
 				return true;
 			}
-		} else {
-			return false;
 		}
+		//  else {
+		// 	return false;
+		// }
 	};
 
 	const checkHuisnumentRegex = val => {
@@ -120,32 +96,43 @@ const Header = props => {
 			} else {
 				return true;
 			}
-		} else {
-			return false;
 		}
+		// else {
+		// 	return false;
+		// }
 	};
 
 	const checkWoonPlatesRegex = WoonPlates => {
-		let validName = /^[0-9]+$/;
+		let validName = /^[a-zA-Z ]*$/;
 		if (WoonPlates != '') {
 			if (validName.test(WoonPlates)) {
 				return false;
 			} else {
 				return true;
 			}
-		} else {
-			return false;
 		}
+		//  else {
+		// 	return false;
+		// }
 	};
 
-	const TraprenovatieData = () => {
-		const update = {
-			postCode,
-			straat,
-			huisnument,
-			WoonPlates,
+	const TraprenovatieData = e => {
+		e.preventDefault();
+		let update = {
+			postCode: postCode,
+			straat: straat,
+			huisnument: huisnument,
+			WoonPlates: WoonPlates,
 		};
-		console.log(update, '========>update');
+
+		// console.log(update, 'update');
+		// history.push('/page2', update);
+		history.push({
+			pathname: '/page2',
+			state: { update },
+		});
+		// setTrapreData(update);
+		// console.log(update, 'update======>');
 	};
 
 	return (
@@ -174,7 +161,6 @@ const Header = props => {
 									rounded
 								/>
 							</div>
-							{/* <div> */}
 							<h4 className='fs--28  pl-md-0 fs--35 pl-md-0 text-light text-left mt-5 mt-md-3 fw--600'>
 								Gratis en Vrijblijvend <br />
 								<span className='w-100'>
@@ -182,9 +168,8 @@ const Header = props => {
 								</span>
 								netwerk van Speicallisten ?
 							</h4>
-							{/* </div> */}
 						</div>
-						{/* </div> */}
+
 						<div className='mt-2 p-0 fs-5'>
 							<p className='text-light fw-100 shadow-sm'>
 								<span className='w-100 fs--22 fw-400'>
@@ -201,19 +186,12 @@ const Header = props => {
 								</p>
 							</p>
 						</div>
-						{/* </div> */}
 					</Col>
 					<Col
 						md='6'
 						xs='12'
 						className='align-items-end  pl-0 ml-0 hero_section_row2_Col2'
 					>
-						{/* <img
-							src={HeroTextTopLogo}
-							className='mt-3 ml-md-3 text-center'
-							width='140px'
-						/> */}
-						{/* <br /> */}
 						<div className='mx-4 mx-md-0 px-md-3 ml-md-4 hero_section_row2_Col2_OffertParagraph'>
 							<p className='mt-2 mt-md-2'>
 								<span className='text-site-orange fs--28 fw--600'>
@@ -226,7 +204,6 @@ const Header = props => {
 								<span className='font-weight-bold fs--28 fw--600 text-site-primary'>
 									Vraag nu gratis offertes aan
 								</span>{' '}
-								{/* <br /> */}
 								<span className='font-weight-bold fs--28 fw--600 text-site-primary'>
 									voor jouw
 								</span>
@@ -238,7 +215,7 @@ const Header = props => {
 						</div>
 
 						<Card
-							style={{ height: '450px' }}
+							style={{ height: '500px' }}
 							className='px-3 mx-3 mt-3 mb-3 bg-site-primary card'
 						>
 							<CardHeader className='text-light fs-1 font-weight-normal d-flex border-bottom-1  border-light border-w-75 w-85'>
@@ -368,41 +345,38 @@ const Header = props => {
 									</CardText>
 								</CardBody>
 								<div className='text-center'>
-									{checkPostCodeRegex(postCode) == false &&
-									checkStraatRegex(straat) == false &&
-									checkHuisnumentRegex(huisnument) == false &&
-									checkWoonPlatesRegex(WoonPlates) == false &&
-									postCode != '' &&
-									straat !== '' &&
-									huisnument !== '' &&
-									WoonPlates !== '' ? (
+									{checkPostCodeRegex(postCode) === false &&
+									checkStraatRegex(straat) === false &&
+									checkHuisnumentRegex(huisnument) ===
+										false &&
+									checkWoonPlatesRegex(WoonPlates) ===
+										false ? (
 										<>
-											<Link
-												to='/page2'
+											{/* <Link
+												to={{
+													pathname: '/page2',
+													state: trapreData,
+												}}
 												className='text-decoration-none'
-												// props={
-												// 	TraprenovatieData:
-												// 		TraprenovatieData,
-												// }
+											> */}
+											<Button
+												type='submit'
+												className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'
 											>
-												<Button
-													type='submit'
-													className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'
-												>
-													GRATIS OFFERTES VERGELIJKN{' '}
-													<span>
-														<i
-															class='fa fa-arrow-right'
-															aria-hidden='true'
-														></i>
-													</span>
-												</Button>
-											</Link>
+												GRATIS OFFERTES VERGELIJKN{' '}
+												<span>
+													<i
+														class='fa fa-arrow-right'
+														aria-hidden='true'
+													></i>
+												</span>
+											</Button>
+											{/* </Link> */}
 										</>
 									) : (
 										<>
 											<Button
-												// onClick={validate}
+												type='button'
 												className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'
 											>
 												GRATIS OFFERTES VERGELIJKN{' '}

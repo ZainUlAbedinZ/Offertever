@@ -17,7 +17,7 @@ import {
 
 import MainSection from '../components/Traprenovatie2/MainSection';
 import Testimonial from '../components/Traprenovatie/Testimonial';
-import Footer from '../components/Footer/Footer';
+import Footer from '../components/Traprenovatie2/Footer';
 import HorizontalBar from '../components/Traprenovatie/HorizontalBar';
 import Header from '../components/Traprenovatie2/Header';
 

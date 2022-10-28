@@ -21,21 +21,18 @@ import Arrow from '../../assets/img/ArrowSign.png';
 const MainSection = props => {
 	return (
 		<>
-			{/* Flex Container */}
 			<Container>
 				<div className='px-3'>
 					<Row className='justify-content-center pt-5'>
-						{/* Col; */}
 						<Col md='4' sm='4'>
-							<div className='align-self-center text-right'>
-								<h4 className='text-dark text-right fw--700 mt-2'>
+							<div className='align-self-center text-center text-md-right'>
+								<h4 className='text-dark text-center text-md-right fw--700 mt-2'>
 									KOSTEN
 								</h4>
-								<h4 className='text-dark text-right fw--700 py-0'>
+								<h4 className='text-dark text-center text-md-right fw--700 py-0'>
 									TRAPRENOVATIE
 								</h4>
-								{/* hr */}
-								<span className='float-right m-0 p-0'>
+								<span className='text-center float-md-right m-0 p-0'>
 									<hr
 										style={{
 											height: '4px',
@@ -70,11 +67,8 @@ const MainSection = props => {
 			<Container>
 				<div className='px-3'>
 					<Row className='justify-content-center'>
-						{/* COl ; */}
-						<Col md='9' sm='9' className=''>
-							{/* Table */}
+						<Col md='8' sm='8'>
 							<table class='table  table-borderless bg-site-table-color'>
-								{/* className='border-bottom border-dark' */}
 								<thead>
 									<tr>
 										<th scope='col'></th>
@@ -103,7 +97,7 @@ const MainSection = props => {
 										<th scope='row'>
 											<img
 												src={Laminaat}
-												className='w-50'
+												className='w-50 float-right'
 											/>
 										</th>
 										<td>Laminaat</td>
@@ -112,16 +106,21 @@ const MainSection = props => {
 									</tr>
 									<tr>
 										<th scope='row'>
-											<img src={hpl} className='w-50' />
+											<img
+												src={hpl}
+												className='w-50 float-right'
+											/>
 										</th>
 										<td>HPL/CPL</td>
 										<td>€ 160</td>
 										<td>vanaf € 2.500</td>
 									</tr>
 									<tr>
-										{/* PVC */}
 										<th scope='row'>
-											<img src={PVC} className='w-50' />
+											<img
+												src={PVC}
+												className='w-50 float-right'
+											/>
 										</th>
 										<td>PVC(kunststof)</td>
 										<td>€ 160</td>
@@ -129,7 +128,10 @@ const MainSection = props => {
 									</tr>
 									<tr>
 										<th scope='row'>
-											<img src={Hout} className='w-50' />
+											<img
+												src={Hout}
+												className='w-50 float-right'
+											/>
 										</th>
 										<td>Hout</td>
 										<td>€ 160</td>
@@ -138,9 +140,9 @@ const MainSection = props => {
 								</tbody>
 							</table>
 						</Col>
-						<Col md='3' sm='3'>
+						<Col md='4' sm='4'>
 							<div className='pt-5 mt-5'>
-								<p className='text-justify'>
+								<p className='text-justify align-self-center'>
 									* Een trap heeft meestal 13 treden.
 									Bovengenoemde prijzen gelden slechts als een
 									indicatie. Om prijzen op maat te ontvangen
@@ -159,8 +161,13 @@ const MainSection = props => {
 						bij het vinden van de beste deal voor jouw trap!
 					</p>
 					<div className='text-center'>
-						<Button className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'>
-							GRATIS OFFERTES VERGELIJKN{' '}
+						<Button
+							onClick={() => {
+								window.scroll({ top: 0, left: 0 });
+							}}
+							className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'
+						>
+							VERGELIJK GRATIS OFFERTES{' '}
 							<span>
 								<i
 									class='fa fa-arrow-right'

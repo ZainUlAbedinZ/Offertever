@@ -171,9 +171,12 @@ const HeroSection = props => {
 								</Col>
 							</Row>
 							<br />
-							<div className='text-center'>
-								<Link to='/page2'>
-									<Button className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light rounded-0'>
+							<div className='text-center '>
+								<Link
+									to='/page2'
+									className='text-decoration-none'
+								>
+									<Button className='btn d-inline btn-lg bg-site-orange text-light fs--20 fw--400 border-light text-decoration-none rounded-0'>
 										GRATIS OFFERTES VERGELIJKN{' '}
 										<span>
 											<i
