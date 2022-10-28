@@ -757,8 +757,8 @@ const Header = props => {
 												<div
 													className={
 														activeCard3.includes(4)
-															? 'bg-primary d-flex  h-100 w-100 border border-secondary rounded float-right float-md-none '
-															: 'bg-light d-flex h-100 w-100 border border-secondary rounded float-right float-md-none '
+															? 'bg-primary d-flex  h-100 w-100 border border-secondary rounded float-right float-md-none activeCard3'
+															: 'bg-light d-flex h-100 w-100 border border-secondary rounded float-right float-md-none activeCard3'
 													}
 													onClick={() => {
 														CardClickHandler(4);
@@ -822,8 +822,8 @@ const Header = props => {
 												<div
 													className={
 														activeCard3.includes(6)
-															? 'bg-primary  d-flex py-2 h-100 w-100 border border-secondary rounded float-right float-md-none'
-															: 'bg-light  d-flex py-2 h-100 w-100 border border-secondary rounded float-right float-md-none'
+															? 'bg-primary  d-flex py-2 h-100 w-100 border border-secondary rounded float-right float-md-none activeCard3'
+															: 'bg-light  d-flex py-2 h-100 w-100 border border-secondary rounded float-right float-md-none activeCard3'
 													}
 													onClick={() => {
 														CardClickHandler(6);
@@ -875,8 +875,8 @@ const Header = props => {
 												<div
 													className={
 														activeCard3.includes(8)
-															? 'bg-primary  d-flex py-2 h-100 w-100 border border-secondary rounded float-right float-md-none'
-															: 'bg-light d-flex py-2 h-100 w-100 border border-secondary rounded float-right float-md-none'
+															? 'bg-primary  d-flex py-2 h-100 w-100 border border-secondary rounded float-right float-md-none activeCard3'
+															: 'bg-light d-flex py-2 h-100 w-100 border border-secondary rounded float-right float-md-none activeCard3'
 													}
 													onClick={() => {
 														CardClickHandler(8);
@@ -1069,8 +1069,8 @@ const Header = props => {
 												<div
 													className={
 														activeCard4.includes(12)
-															? 'bg-primary w-100 h-100  d-flex py-2 pl-2 border border-secondary mt-3 mt-md-0  rounded mx-auto mx-md-0'
-															: 'bg-light w-100 h-100  d-flex py-2 pl-2 border border-secondary mt-3 mt-md-0  rounded mx-auto mx-md-0'
+															? 'bg-primary w-100 h-100  d-flex py-2 pl-2 border border-secondary mt-3 mt-md-0  rounded mx-auto mx-md-0 activeCard4'
+															: 'bg-light w-100 h-100  d-flex py-2 pl-2 border border-secondary mt-3 mt-md-0  rounded mx-auto mx-md-0 activeCard4'
 													}
 													onClick={() => {
 														fourthCardClickHandler(
@@ -1194,8 +1194,8 @@ const Header = props => {
 															activeCard5.includes(
 																14
 															)
-																? 'p-3 border bg-primary justify-content-center border border-secondary d-flex h-100 w-100 rounded'
-																: 'p-3 border bg-light  justify-content-center border border-secondary d-flex h-100 w-100 rounded'
+																? 'p-3 border bg-primary justify-content-center border border-secondary d-flex h-100 w-100 rounded activeCard5'
+																: 'p-3 border bg-light  justify-content-center border border-secondary d-flex h-100 w-100 rounded activeCard5'
 														}
 														onClick={() => {
 															FifthCardClickHandler(
@@ -1262,8 +1262,8 @@ const Header = props => {
 															activeCard5.includes(
 																16
 															)
-																? 'p-3 border bg-primary d-flex justify-content-center  border border-secondary h-100 w-100 rounded'
-																: 'p-3 border bg-light d-flex justify-content-center border border-secondary h-100 w-100 rounded'
+																? 'p-3 border bg-primary d-flex justify-content-center  border border-secondary h-100 w-100 rounded activeCard5'
+																: 'p-3 border bg-light d-flex justify-content-center border border-secondary h-100 w-100 rounded activeCard5'
 														}
 														onClick={() => {
 															FifthCardClickHandler(
